@@ -1,9 +1,21 @@
-import React from 'react'
+import React from "react";
+import "./Header.scss";
+const Header = ({ categorieS }) => {
+  // const{categorieS}=props
 
-const Header = () => {
+  console.log(categorieS);
+
   return (
-    <div>Header</div>
-  )
-}
+    <div className="header">
+      <h1>Product List</h1>
 
-export default Header
+      <div className="btnDiv">
+        {categorieS.map((a, index) => (
+          <button key={index}>{a}</button>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Header;

@@ -1,0 +1,16 @@
+@import "../../scss/variables";
+@import "../../scss/mixins";
+
+.header {
+  h1 {
+  }
+
+  .btnDiv {
+    button {
+      padding: 1rem;
+      border-radius: 1rem;
+      border: none;
+      cursor:pointer;
+    }
+  }
+}
