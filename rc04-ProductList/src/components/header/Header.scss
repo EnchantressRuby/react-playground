@@ -3,8 +3,9 @@
 
 .header {
   text-align: center;
-  margin-top: 0.5rem;
+  margin-top: 5rem;
   padding: 0.5rem;
+
   h1 {
     font-size: 2.3rem;
     margin-bottom: 1rem;
@@ -13,16 +14,28 @@
   }
 
   .btnDiv {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: center;
+    // align-items: center;
+    // gap: 1rem;
+
+    @include flexxx(center, 1rem);
+
+    // mixin sayfasına buradan paramtere göndererek, stillendirme yaptık
 
     button {
       padding: 1rem;
       border-radius: 1rem;
       border: none;
       cursor: pointer;
+      text-transform: uppercase;
+      transition: all 1s;
+
+      &:hover {
+        background-color: $btnHoverColor;
+      }
     }
   }
 }

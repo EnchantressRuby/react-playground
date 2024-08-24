@@ -1,1 +1,10 @@
+@mixin flexxx($gap, $j-content) {
 
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: $gap;
+    justify-content: $j-content;
+    align-items: center;
+
+}
