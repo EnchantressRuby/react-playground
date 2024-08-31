@@ -1,6 +1,10 @@
+import Button from "../button/Button"
+
 const Card = () => {
     return (
-    <div>Card</div>
+    <div>Card
+        <Button />
+    </div>
 )
 }
 
