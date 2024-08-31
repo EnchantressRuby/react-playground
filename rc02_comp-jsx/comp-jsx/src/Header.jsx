@@ -8,7 +8,9 @@ const Header = () => {
     return(
         // JSX
         <header>
-            <h1>{message}</h1>
+            {/* JSX comment section */}
+            {/* className */}
+            <h1 className="par">{message}</h1>
         </header>
     );
 };

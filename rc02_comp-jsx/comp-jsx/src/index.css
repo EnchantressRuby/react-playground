@@ -2,3 +2,8 @@ body {
   margin: 0;
 }
 
+.par {
+  color: green;
+  font-weight: 700;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
