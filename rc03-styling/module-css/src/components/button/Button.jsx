@@ -1,3 +1,5 @@
+import btnStyles from "./Button.module.css"
+
 // const Button = (props) => {
 //     return(
 //         <div>
@@ -19,8 +21,8 @@
 
 const Button = ({name}) => {
     return(
-        <div>
-            <button>{name}</button>
+        <div className={btnStyles.title}>
+            <button className="btnBlue">{name}</button>
         </div>
     )
 }
