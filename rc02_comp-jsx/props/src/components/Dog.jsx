@@ -11,13 +11,16 @@ import Name from "./Name"
 //     )
 // }
 
-const Dog = ({ name, img, color }) => {
+const Dog = ({ name, img, color = "gray", isBlueEyed }) => {
     //? dest
     // const { name, img, color } = props
     return (
         <div>
             <Name name={name} />
             {/* <p style={{ padding: "1rem", fontWeight: "bold", fontSize: "2rem" }}>{name}</p> */}
+
+            {/* JSX has no if/else, ternary can be used */}
+            <p style={{ marginLeft: "1rem" }}>Blue eyed?: {isBlueEyed ? "Yes" : "No"} </p>
             <img className="img" src={img} alt="" />
             <p style={{ backgroundColor: color, color: "white", padding: "1rem" }}>Color:{color}</p>
             <hr />

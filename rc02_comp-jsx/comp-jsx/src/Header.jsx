@@ -7,7 +7,7 @@
 const Header = () => {
     // JS
     const message = "Hello world"
-    return(
+    return (
         // JSX
         <header>
             {/* JSX comment section */}
