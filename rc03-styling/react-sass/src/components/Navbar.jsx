@@ -1,8 +1,10 @@
+import "../scss/navbar.scss"
+
 const Navbar = () => {
     return (
-        <div>
+        <header className="navbar">
             <h1>Team Members</h1>
-        </div>
+        </header>
     )
 }
 

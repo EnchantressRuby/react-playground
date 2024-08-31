@@ -1,6 +1,8 @@
+import FooterStyle from "../scss/footer.module.scss"
+
 const Footer = () => {
     return (
-        <footer>
+        <footer className={FooterStyle.footer}>
             <p>Copyright by encRuby {new Date().getFullYear()}</p>
         </footer>
     )

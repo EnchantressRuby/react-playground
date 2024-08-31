@@ -1,7 +1,29 @@
+import teamMembers from "../data";
+
 const Card = () => {
     return (
         <div>
-            <h1>Card</h1>
+            {
+                teamMembers.map((item)=>{
+                    const {id, name, role, bio, img} =item;
+                    return(
+                        <div className="card">
+                            <h2>{name}</h2>
+                            <h3>{role}</h3>
+                            <img src={img} alt={name} />
+                            <p>{bio}</p>
+                            <div className="buttons">
+                                <button className="small">
+                                    Small
+                                </button>
+                                <button className="large">
+                                    large
+                                </button>
+                            </div>
+                        </div>
+                    )
+                })
+            }
         </div>
     )
 }

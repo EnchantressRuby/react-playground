@@ -1,0 +1,13 @@
+// @import 'variables';
+@use "variables";
+
+header {
+    padding: 2rem;
+    background-color: variables.$Rose-1;
+    color: variables.$Rose-5;
+}
+
+// .navbar {
+//     .title{}
+//     img{}
+// }
