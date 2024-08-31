@@ -1,7 +1,26 @@
-const Button = (props) => {
+// const Button = (props) => {
+//     return(
+//         <div>
+//             <button>{props.name}</button>
+//         </div>
+//     )
+// }
+
+
+// const Button = (props) => {
+//     const {name} = props
+//     return(
+//         <div>
+//             <button>{name}</button>
+//         </div>
+//     )
+// }
+
+
+const Button = ({name}) => {
     return(
         <div>
-            <button>{props.name}</button>
+            <button>{name}</button>
         </div>
     )
 }
