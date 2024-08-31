@@ -1,6 +1,8 @@
-const Button = () => {
+const Button = (props) => {
     return(
-        <div>Button</div>
+        <div>
+            <button>{props.name}</button>
+        </div>
     )
 }
 
