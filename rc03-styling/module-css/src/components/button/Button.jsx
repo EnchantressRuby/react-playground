@@ -22,7 +22,7 @@ import btnStyles from "./Button.module.css"
 const Button = ({name}) => {
     return(
         <div className={btnStyles.title}>
-            <button className="btnBlue">{name}</button>
+            <button className={`${btnStyles.btnBlue} ${btnStyles["cursor-pointer"]}`}>{name}</button>
         </div>
     )
 }
