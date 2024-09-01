@@ -15,7 +15,7 @@ const Card = () => {
                             <p className="par">{bio}</p>
                             <div className="buttons">
                                 <button className="small">
-                                    About
+                                    Details
                                 </button>
                                 <button className="small">
                                     Contact

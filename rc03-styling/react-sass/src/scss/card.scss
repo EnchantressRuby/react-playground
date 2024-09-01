@@ -8,6 +8,12 @@
     margin-top: 1rem;
     margin-bottom: 1rem;
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.447);
+    transition: transform 0.3s ease;
+
+    h2 {
+        width: 100%;
+        padding: 0.8rem;
+    }
 
     .img {
         width: 70%;
@@ -34,6 +40,14 @@
             background-color: rgba(98, 246, 98, 0.357);
             transform: scale(1.1);
         }
+    }
+
+    &:hover h2{
+        color: $Rose-1;
+    }
+
+    &:hover {
+        transform: scale(1.01);
     }
 
 
