@@ -1,2 +1,40 @@
 @import "variables";
 
+.card {
+    width: 30%;
+    height: 470px;
+    display: block;
+    margin: auto;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.447);
+
+    .img {
+        width: 70%;
+        border-radius: 5px;
+        margin: 1rem;
+    }
+
+    .par {
+        width: 70%;
+        margin: auto;
+        margin-bottom: 1rem;
+    }
+
+    .small {
+        padding: 0.3rem 1rem;
+        margin: 1rem;
+        border-radius: 7px;
+        cursor: pointer;
+        background-color: lightgreen;
+        border: none;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            background-color: rgba(98, 246, 98, 0.357);
+            transform: scale(1.1);
+        }
+    }
+
+
+}

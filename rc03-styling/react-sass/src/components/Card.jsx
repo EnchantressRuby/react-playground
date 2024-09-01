@@ -1,4 +1,5 @@
 import teamMembers from "../data";
+import "../scss/card.scss"
 
 const Card = () => {
     return (
@@ -10,14 +11,14 @@ const Card = () => {
                         <div className="card">
                             <h2>{name}</h2>
                             <h3>{role}</h3>
-                            <img src={img} alt={name} />
-                            <p>{bio}</p>
+                            <img src={img} alt={name} className="img"/>
+                            <p className="par">{bio}</p>
                             <div className="buttons">
                                 <button className="small">
-                                    Small
+                                    About
                                 </button>
-                                <button className="large">
-                                    large
+                                <button className="small">
+                                    Contact
                                 </button>
                             </div>
                         </div>
