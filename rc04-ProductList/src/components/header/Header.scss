@@ -1,40 +1,40 @@
-// @import "../../scss/variables";
-// @import "../../scss/mixins";
+@import "../../scss/variables";
+@import "../../scss/mixins";
 
-// .header {
-//   text-align: center;
-//   margin-top: 5rem;
-//   padding: 0.5rem;
+.header {
+  text-align: center;
+  margin-top: 5rem;
+  padding: 0.5rem;
 
-//   h1 {
-//     font-size: 2.3rem;
-//     margin-bottom: 1rem;
-//     font-family: monospace;
-//     color: $cardNavBgColor;
-//   }
+  h1 {
+    font-size: 2.3rem;
+    margin-bottom: 1rem;
+    font-family: monospace;
+    color: $cardNavBgColor;
+  }
 
-//   .btnDiv {
+  .btnDiv {
 
-//     // display: flex;
-//     // flex-wrap: wrap;
-//     // justify-content: center;
-//     // align-items: center;
-//     // gap: 1rem;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: center;
+    // align-items: center;
+    // gap: 1rem;
 
-//     @include flexxx(center, 2rem);
-//     // mixin 
+    @include flexxx(center, 2rem);
+    // mixin 
 
-//     button {
-//       padding: 1rem;
-//       border-radius: 1rem;
-//       border: none;
-//       cursor: pointer;
-//       text-transform: uppercase;
-//       transition: all 1s;
+    button {
+      padding: 1rem;
+      border-radius: 1rem;
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: all 1s;
 
-//       &:hover {
-//         background-color: $btnHoverColor;
-//       }
-//     }
-//   }
-// }
+      &:hover {
+        background-color: $btnHoverColor;
+      }
+    }
+  }
+}
