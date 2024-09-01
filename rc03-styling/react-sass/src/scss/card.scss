@@ -2,7 +2,6 @@
 
 .card {
     width: 30%;
-    height: 470px;
     display: block;
     margin: auto;
     margin-top: 1rem;
@@ -42,7 +41,7 @@
         }
     }
 
-    &:hover h2{
+    &:hover h2 {
         color: $Rose-1;
     }
 
