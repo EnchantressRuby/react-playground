@@ -6,7 +6,7 @@ const Card = () => {
         <div>
             {
                 teamMembers.map((item)=>{
-                    const {name, role, bio, img} =item;
+                    const {id, name, role, bio, img} =item;
                     return(
                         <div className="card">
                             <h2>{name}</h2>
