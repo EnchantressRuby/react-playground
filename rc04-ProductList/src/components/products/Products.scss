@@ -10,7 +10,7 @@
     // align-items: center;
     // gap:2rem;
 
-    @include flexxx(2rem, space-evenly);
+    @include flex(2rem, space-evenly);
     // mixin 
 
     .card {

@@ -9,7 +9,7 @@ function App() {
         <div>
             <Header categories={categories} />
 
-            <Products products={products}/>
+            <Products products={products} />
         </div>
     );
 }
