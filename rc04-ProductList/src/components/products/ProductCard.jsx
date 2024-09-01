@@ -1,23 +1,23 @@
-// import React from "react";
+import React from "react";
 
-// // const ProductCard = ({urun}) => {
-// //   console.log(urun);
-// //   const{title,image,price }=urun
+// const ProductCard = ({prod}) => {
+//   console.log(prod);
+//   const{title,image,price }=prod
 
-// const ProductCard = ({ title, image, price }) => {
-//   return (
-//     <div className="card">
-//       <div className="price">
-//         <h3>{price}</h3>
-//       </div>
+const ProductCard = ({ title, image, price }) => {
+  return (
+    <div className="card">
+      <div className="price">
+        <h3>{price}</h3>
+      </div>
 
-//       <img src={image} alt="" />
+      <img src={image} alt="" />
 
-//       <div className="card-over">
-//         <h2>{title} </h2>
-//       </div>
-//     </div>
-//   );
-// };
+      <div className="card-over">
+        <h2>{title} </h2>
+      </div>
+    </div>
+  );
+};
 
-// export default ProductCard;
+export default ProductCard;

@@ -1,7 +1,7 @@
 import React from "react";
 import "./Header.scss";
 const Header = ({ categories }) => {
-//   // const{categorieS}=props
+  // const{categorieS}=props
 
   console.log(categories);
 
