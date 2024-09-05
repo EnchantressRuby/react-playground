@@ -1,7 +1,9 @@
+import FormEvents from "./components/1-form-events/FormEvents";
+
 function App() {
   return (
     <div className="App">
-      <h1>App</h1>
+      <FormEvents />
     </div>
   );
 }
