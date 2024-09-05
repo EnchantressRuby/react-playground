@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react';
 
 const FormEvents = () => {
+    const [name, setName] = useState("")
+    //? After each update of the state, the component will re-render and the changed parts are printed to the DOM
     return (
         <div className="mt-4 p-3">
             <div className="text-center">
-                <h1>****************</h1>
+                <h1>**********************</h1>
                 <h2>Form Events</h2>
             </div>
             <form>
@@ -12,7 +14,9 @@ const FormEvents = () => {
                     <label htmlFor="name" className="form-label">
                         Name
                     </label>
-                    <input
+                    {/*onChange event is triggered whenever the input value changes
+                    state is updated via the event written*/}
+                    <input onChange={(e) => setName(e.target.value)}
                         type="text"
                         className="form-control"
                         id="name" />
@@ -39,9 +43,9 @@ const FormEvents = () => {
 
                 </div>
                 <div className="mb-3 form-check">
-                    <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                    <label className="form-check-label" htmlFor="exampleCheck1">
-                        Check me out
+                    <input type="checkbox" className="form-check-input" id="remember" />
+                    <label className="form-check-label" htmlFor="remember">
+                        Remember me
                     </label>
                 </div>
                 <button type="submit" className="btn btn-primary">
