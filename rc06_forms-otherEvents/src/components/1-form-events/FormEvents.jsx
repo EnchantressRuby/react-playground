@@ -15,7 +15,17 @@ const FormEvents = () => {
             name: ${name},
             password: ${password}
             `)
+
+        // reset variables
+        // if you want to control the input value depending on the state, you need to connect the states to the value props of the inputs. this is called conversion from an uncontrolled component to a controlled component.
+        setName("");
+        setPassword("");
+        setCountry("");
+        setDate("");
+        setRemember("");
     }
+
+
 
     return (
         <div className="mt-4 p-3">
@@ -34,6 +44,7 @@ const FormEvents = () => {
                         type="text"
                         className="form-control"
                         id="name"
+                        value={name}
                         required />
                 </div>
 
@@ -45,6 +56,7 @@ const FormEvents = () => {
                         type="password"
                         className="form-control"
                         id="password"
+                        value={password}
                         required />
                 </div>
 
@@ -56,7 +68,8 @@ const FormEvents = () => {
                     <input onChange={(e) => setDate(e.target.value)}
                         type="datetime-local"
                         className="form-control"
-                        id="date" />
+                        id="date"
+                        value={date} />
                 </div>
 
                 <div className="mb-3">
@@ -72,7 +85,9 @@ const FormEvents = () => {
                 </div>
 
                 <div className="mb-3 form-check">
-                    <input onChange={(e) => setRemember(e.target.checked)} type="checkbox" className="form-check-input" id="remember" />
+                    <input onChange={(e) => setRemember(e.target.checked)} type="checkbox" className="form-check-input" 
+                    id="remember" 
+                    checked={remember} />
                     <label className="form-check-label" htmlFor="remember">
                         Remember me: <span className='text-danger'>{remember.toString()}</span>
                     </label>
