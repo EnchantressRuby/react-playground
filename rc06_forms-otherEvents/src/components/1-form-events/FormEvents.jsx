@@ -85,9 +85,9 @@ const FormEvents = () => {
                 </div>
 
                 <div className="mb-3 form-check">
-                    <input onChange={(e) => setRemember(e.target.checked)} type="checkbox" className="form-check-input" 
-                    id="remember" 
-                    checked={remember} />
+                    <input onChange={(e) => setRemember(e.target.checked)} type="checkbox" className="form-check-input"
+                        id="remember"
+                        checked={remember} />
                     <label className="form-check-label" htmlFor="remember">
                         Remember me: <span className='text-danger'>{remember.toString()}</span>
                     </label>
