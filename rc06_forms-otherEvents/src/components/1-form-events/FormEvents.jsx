@@ -30,7 +30,7 @@ const FormEvents = () => {
     return (
         <div className="mt-4 p-3">
             <div className="text-center">
-                <h1>**********************</h1>
+                <h1>********</h1>
                 <h2>Form Events</h2>
             </div>
             <form onSubmit={sendToDatabase}>
