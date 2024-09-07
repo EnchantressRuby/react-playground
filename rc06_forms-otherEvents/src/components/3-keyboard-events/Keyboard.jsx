@@ -14,11 +14,11 @@ const Keyboard = () => {
     }
 
     const handleCopy = (e) => {
-        e.preventDefault()
+        e.preventDefault()  // copy feature disabled
         alert("This text cannot be copied!")
     }
     const handleCut = (e) => {
-        e.preventDefault()
+        e.preventDefault() // cut feature disabled
         alert("This text cannot be interrupted!")
     }
 
