@@ -3,14 +3,19 @@ import React from 'react'
 const Keyboard = () => {
 
     const handleKeyDown = (e) => {
-        console.log(e.keyCode);
-        console.log(e.key);
-        if (e.key ==="Enter") {
+        // console.log(e.keyCode);
+        // console.log(e.key);
+        if (e.key === "Enter") {
             alert("Form submitted!")
         }
-        if (e.key ==="Backspace") {
-            alert("Are you sure you want to delete it?")
-        }
+        // if (e.key ==="Backspace") {
+        //     alert("Are you sure you want to delete it?")
+        // }
+    }
+
+    const handleCopy = (e) => {
+        e.preventDefault()
+        alert("This text may not be copied!")
     }
 
     return (
@@ -29,7 +34,8 @@ const Keyboard = () => {
                     name="textarea"
                     id="area"
                     cols="30"
-                    rows="10">
+                    rows="10"
+                    onCopy={handleCopy}>
                 </textarea>
             </div>
         </div>
