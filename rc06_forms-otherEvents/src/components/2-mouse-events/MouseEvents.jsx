@@ -31,7 +31,7 @@ const MouseEvents = () => {
 
       <div onMouseOver={handleMouseMove} id='todo-4' className="bg-success text-light w-50 p-4 mt-4"><span>onMouseOver</span></div>
 
-      <div id='todo-5' className="bg-success text-light w-50 p-4 mt-4"><span>onMouseEnter</span></div>
+      <div onMouseEnter={handleMouseMove} id='todo-5' className="bg-success text-light w-50 p-4 mt-4"><span>onMouseEnter</span></div>
 
       X: {coordX} and Y: {coordY}
     </div>
