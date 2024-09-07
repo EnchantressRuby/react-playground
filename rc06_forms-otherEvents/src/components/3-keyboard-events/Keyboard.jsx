@@ -15,7 +15,11 @@ const Keyboard = () => {
 
     const handleCopy = (e) => {
         e.preventDefault()
-        alert("This text may not be copied!")
+        alert("This text cannot be copied!")
+    }
+    const handleCut = (e) => {
+        e.preventDefault()
+        alert("This text cannot be interrupted!")
     }
 
     return (
@@ -35,7 +39,8 @@ const Keyboard = () => {
                     id="area"
                     cols="30"
                     rows="10"
-                    onCopy={handleCopy}>
+                    onCopy={handleCopy}
+                    onCut={handleCut}>
                 </textarea>
             </div>
         </div>
