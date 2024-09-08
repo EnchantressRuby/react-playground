@@ -1,4 +1,5 @@
-import {Container} from "react-bootstrap";
+import Container from "react-bootstrap/Container";
+import Header from "./components/header/Header";
 
 
 function App() {
@@ -7,7 +8,7 @@ function App() {
     //   <h1>Hello React</h1>
     // </div>
     <Container>
-      Hello React
+      <Header />
     </Container>
   );
 }
