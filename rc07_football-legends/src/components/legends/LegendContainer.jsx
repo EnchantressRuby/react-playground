@@ -1,9 +1,11 @@
-import Container from "react-bootstrap/Container"
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import {data} from "../../helpers/data";
 
 const LegendContainer = () => {
     return (
         <Container>
-            LegendContainer
+            <Row></Row>
         </Container>
     )
 }
