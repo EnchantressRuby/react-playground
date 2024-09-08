@@ -7,7 +7,7 @@ function App() {
     // <div className="container">
     //   <h1>Hello React</h1>
     // </div>
-    <Container>
+    <Container className="text-center my-5">
       <Header />
     </Container>
   );
