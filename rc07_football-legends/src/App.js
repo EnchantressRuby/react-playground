@@ -1,10 +1,14 @@
-import 'bootstrap/dist/css/bootstrap.css';
+import {Container} from "react-bootstrap";
+
 
 function App() {
   return (
-    <div className="App">
-      <h1>First App</h1>
-    </div>
+    // <div className="container">
+    //   <h1>Hello React</h1>
+    // </div>
+    <Container>
+      Hello React
+    </Container>
   );
 }
 
