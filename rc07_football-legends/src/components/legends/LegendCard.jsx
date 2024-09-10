@@ -1,6 +1,12 @@
-import React from 'react'
+import React, {useState} from 'react'
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Card from 'react-bootstrap/Card';
+
 
 const LegendCard = ({legend}) => {
+    const [show, setShow] = useState(true);
     return (
         <Col xs={10} sm={8} md={6} lg={4} xl={3}>
             <Card>

@@ -4,19 +4,20 @@ import Col from "react-bootstrap/Col";
 import Card from 'react-bootstrap/Card';
 import { data } from "../../helpers/data";
 import { useState } from "react";
+import LegendCard from "./LegendCard";
 
 const LegendContainer = () => {
     const [show, setShow] = useState(true)
     return (
         <Container>
             <Row>
-                {data.map(legend =>
+                {/* {data.map((legend) => (
                     <Col xs={10} sm={8} md={6} lg={4} xl={3}>
                         <Card>
                             {
-                                show ? <Card.Img onClick={()=> setShow(false)} variant="top" src={legend.img} /> :
+                                show ? <Card.Img onClick={() => setShow(false)} variant="top" src={legend.img} /> :
                                     <>
-                                        <Card.Body onClick={()=>setShow(true)}>
+                                        <Card.Body onClick={() => setShow(true)}>
                                             <Card.Title>{legend.name}</Card.Title>
                                             <Card.Text>
                                                 <ul className="m-auto w-100">
@@ -29,10 +30,14 @@ const LegendContainer = () => {
                                         </Card.Footer>
                                     </>
                             }
-
-
                         </Card>
-                    </Col>)}
+                    </Col>
+                ))} */}
+
+                {data.map((legend) => (
+                    <LegendCard legend={legend} />
+                ))}
+
             </Row>
         </Container>
     )
