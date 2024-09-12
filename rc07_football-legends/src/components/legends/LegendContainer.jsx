@@ -9,11 +9,15 @@ import Form from 'react-bootstrap/Form';
 
 const LegendContainer = () => {
     const [show, setShow] = useState(true)
-    console.log(data);
+    //console.log(data);
     const [search, setSearch] = useState("")
 
     const handleChange = (e) => {
+        // console.log("input:", e.target.value)
         setSearch(e.target.value)
+        // console.log(search); //!setter method is async
+        // if (e.target.value)
+        // console.log(search);
     }
 
     return (
