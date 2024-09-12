@@ -5,14 +5,17 @@ import Card from 'react-bootstrap/Card';
 import { data } from "../../helpers/data";
 import { useState } from "react";
 import LegendCard from "./LegendCard";
+import Form from 'react-bootstrap/Form';
 
 const LegendContainer = () => {
     const [show, setShow] = useState(true)
     return (
-        <Container>
-            <Row>
+        <>
+            <Form.Control type="email" placeholder="name@example.com" />
+            <Container>
+                <Row>
 
-                {/* {data.map((legend) => (
+                    {/* {data.map((legend) => (
                     <Col xs={10} sm={8} md={6} lg={4} xl={3}>
                         <Card>
                             {
@@ -35,19 +38,20 @@ const LegendContainer = () => {
                     </Col>
                 ))} */}
 
-                {data.map((legend) => (
-                    <LegendCard key={legend.id} legend={legend} />
-                ))}
+                    {data.map((legend) => (
+                        <LegendCard key={legend.id} legend={legend} />
+                    ))}
 
-                {/* {data.map((legend) => (
+                    {/* {data.map((legend) => (
                     <LegendCard key={legend.id} {...legend} /> {name,img,statistics,official_career}
                 ))} */}
-                {/* {data.map((legend) => (
+                    {/* {data.map((legend) => (
                     <LegendCard key={legend.id} name={legend.name} img={legend.img} statistics={legend.statistics} official_career={legend.official_career} /> {name,img,statistics,official_career}
                 ))} */}
 
-            </Row>
-        </Container>
+                </Row>
+            </Container>
+        </>
     )
 }
 
