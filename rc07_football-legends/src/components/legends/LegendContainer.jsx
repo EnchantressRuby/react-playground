@@ -20,6 +20,8 @@ const LegendContainer = () => {
         // console.log(search);
     }
 
+    const filteredData = data.filter(legend => legend.name.toLowerCase().includes(search.trim().toLowerCase()))
+
     return (
         <>
             <Form.Control type="search" 
