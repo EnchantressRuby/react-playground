@@ -35,9 +35,8 @@ const LegendContainer = () => {
                 ))} */}
 
                 {data.map((legend) => (
-                    <LegendCard legend={legend} />
+                    <LegendCard key={legend.id} legend={legend} />
                 ))}
-
             </Row>
         </Container>
     )
