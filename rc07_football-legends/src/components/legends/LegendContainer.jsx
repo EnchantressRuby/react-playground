@@ -43,4 +43,4 @@ const LegendContainer = () => {
     )
 }
 
-export default LegendContainer;
+export default LegendContainer
