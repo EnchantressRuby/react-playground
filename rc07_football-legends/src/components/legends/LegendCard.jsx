@@ -8,7 +8,7 @@ const LegendCard = ({ legend }) => {
     const [show, setShow] = useState(true);
     return (
         <Col xs={10} sm={8} md={6} lg={4} xl={3}>
-            <Card onClick={() => setShow(!show)} role='button'> {/*taggle*/}
+            <Card onClick={() => setShow(!show)} role='button' className='player-card img-thumbnail' style={{ objectFit: 'cover' }}> {/*taggle*/}
                 {show ? (
                     <Card.Img
                         // onClick={() => setShow(false)}
@@ -22,8 +22,10 @@ const LegendCard = ({ legend }) => {
                         >
                             <Card.Title>{legend.name}</Card.Title>
                             <Card.Text>
-                                <ul className="m-auto w-100">
-                                    {legend.statistics.map(item => <li className="list-unstyled h5 text-start">⚽{item}</li>)}
+                                <ul className="m-auto ps-0">
+                                    {legend.statistics.map((item) => (
+                                        <li className="list-unstyled h5 text-start">⚽{item}</li>
+                                    ))}
                                 </ul>
                             </Card.Text>
                         </Card.Body>
