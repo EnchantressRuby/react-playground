@@ -11,6 +11,7 @@ const LegendContainer = () => {
     return (
         <Container>
             <Row>
+
                 {/* {data.map((legend) => (
                     <Col xs={10} sm={8} md={6} lg={4} xl={3}>
                         <Card>
@@ -37,6 +38,14 @@ const LegendContainer = () => {
                 {data.map((legend) => (
                     <LegendCard key={legend.id} legend={legend} />
                 ))}
+
+                {/* {data.map((legend) => (
+                    <LegendCard key={legend.id} {...legend} /> {name,img,statistics,official_career}
+                ))} */}
+                {/* {data.map((legend) => (
+                    <LegendCard key={legend.id} name={legend.name} img={legend.img} statistics={legend.statistics} official_career={legend.official_career} /> {name,img,statistics,official_career}
+                ))} */}
+
             </Row>
         </Container>
     )
