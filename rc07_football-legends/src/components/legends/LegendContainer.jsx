@@ -9,9 +9,19 @@ import Form from 'react-bootstrap/Form';
 
 const LegendContainer = () => {
     const [show, setShow] = useState(true)
+    console.log(data);
+    const [search, setSearch] = useState("")
+
+    const handleChange = (e) => {
+        setSearch(e.target.value)
+    }
+
     return (
         <>
-            <Form.Control type="email" placeholder="name@example.com" />
+            <Form.Control type="search" 
+            // onChange={handleChange} 
+            onChange={(e)=>handleChange(e)} 
+            placeholder="Search for a Legend..." />
             <Container>
                 <Row>
 
