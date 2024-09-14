@@ -19,6 +19,7 @@ function AddModal() {
                 <Modal.Header closeButton>
                     <Modal.Title>Appointment for drname</Modal.Title>
                 </Modal.Header>
+
                 <Modal.Body>
                     <Form>
                         <Form.Group className="mb-3" controlId="name">
