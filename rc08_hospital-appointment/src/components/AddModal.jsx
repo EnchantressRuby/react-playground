@@ -26,11 +26,12 @@ function AddModal() {
                             <Form.Label>Patient Name:</Form.Label>
                             <Form.Control type="text" placeholder="Enter your name" />
                         </Form.Group>
-                        
+
                         <Form.Group className="mb-3" controlId="date">
                             <Form.Label>Date:</Form.Label>
                             <Form.Control type="datetime-local" placeholder="Date" />
                         </Form.Group>
+                        
                         <div className='text-center '>
                             <Button variant="success" className="me-2">
                                 Save
