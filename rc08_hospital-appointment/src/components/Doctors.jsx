@@ -5,7 +5,7 @@ import { doctorData } from "../helper/data"
 import AddModal from "./AddModal"
 import { useState } from "react"
 
-const Doctors = () => {
+const Doctors = ({handleAdd}) => {
     const [show, setShow] = useState(false);
     const [drName, setDrName] = useState("")
     const handleClose = () => setShow(false);
@@ -37,7 +37,7 @@ const Doctors = () => {
                     );
                 })} */}
             </Row>
-            <AddModal handleClose={handleClose} show={show} drName={drName} />
+            <AddModal handleClose={handleClose} show={show} drName={drName} handleAdd={handleAdd} />
         </Container>
     )
 }
