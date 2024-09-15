@@ -37,7 +37,7 @@ const Doctors = () => {
                     );
                 })} */}
             </Row>
-            <AddModal handleClose={handleClose} show={show} drName={drName}/>
+            <AddModal handleClose={handleClose} show={show} drName={drName} />
         </Container>
     )
 }
