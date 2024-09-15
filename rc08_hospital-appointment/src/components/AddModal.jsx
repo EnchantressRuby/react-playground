@@ -1,9 +1,8 @@
-import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 
-function AddModal({handleClose, show}) {
+function AddModal({handleClose, show, drName}) {
     //! moved to Doctors.jsx
     // const [show, setShow] = useState(false);
 
@@ -18,7 +17,7 @@ function AddModal({handleClose, show}) {
 
             <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Appointment for drname</Modal.Title>
+                    <Modal.Title>Appointment for {drName}</Modal.Title>
                 </Modal.Header>
 
                 <Modal.Body>

@@ -3,13 +3,16 @@ import Row from "react-bootstrap/Row"
 import Col from "react-bootstrap/Col"
 import { doctorData } from "../helper/data"
 import AddModal from "./AddModal"
-import {useState} from "react"
+import { useState } from "react"
 
 const Doctors = () => {
     const [show, setShow] = useState(false);
-
+    const [drName, setDrName] = useState("")
     const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    const handleShow = (name) => {
+        setShow(true);
+        setDrName(name);
+    }
     return (
         <Container className="p-2">
             <h3 className="display-6 mb-3" style={{ color: "rgb(166,18,189)" }}>
@@ -18,7 +21,7 @@ const Doctors = () => {
             <Row>
                 {doctorData.map(({ id, img, dep, name }) => (
                     <Col xs={6} md={4} lg={3} key={id}>
-                        <img className="doctor-img img-thumbnail" src={img} alt={name} onClick={handleShow}/>
+                        <img className="doctor-img img-thumbnail" src={img} alt={name} onClick={() => handleShow(name)} />
                         <h5>{name}</h5>
                         <h6>{dep}</h6>
                     </Col>
@@ -34,7 +37,7 @@ const Doctors = () => {
                     );
                 })} */}
             </Row>
-            <AddModal handleClose={handleClose} show={show} />
+            <AddModal handleClose={handleClose} show={show} drName={drName}/>
         </Container>
     )
 }
