@@ -2,7 +2,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 
-function AddModal({handleClose, show, drName}) {
+function AddModal({ handleClose, show, drName }) {
     //! moved to Doctors.jsx
     // const [show, setShow] = useState(false);
 
