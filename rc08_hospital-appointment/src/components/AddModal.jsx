@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
@@ -8,6 +9,9 @@ function AddModal({ handleClose, show, drName }) {
 
     // const handleClose = () => setShow(false);
     // const handleShow = () => setShow(true);
+
+    const [name, setName] = useState("");
+    const [date, setDate] = useState("");
 
     return (
         <>
@@ -24,11 +28,11 @@ function AddModal({ handleClose, show, drName }) {
                     <Form>
                         <Form.Group className="mb-3" controlId="name">
                             <Form.Label>Patient Name:</Form.Label>
-                            <Form.Control type="text" placeholder="Enter your name" />
+                            <Form.Control onChange={(e)=> setName(e.target.value)} type="text" placeholder="Enter your name" />
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="date">
                             <Form.Label>Date:</Form.Label>
-                            <Form.Control type="datetime-local" placeholder="Date" />
+                            <Form.Control onChange={(e)=> setDate(e.target.value)} type="datetime-local" placeholder="Date" />
                         </Form.Group>
                         <div className='text-center '>
                             <Button variant="success" className="me-2">
