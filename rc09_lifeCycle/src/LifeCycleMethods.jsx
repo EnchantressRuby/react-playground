@@ -31,6 +31,32 @@ class LifeCycleMethods extends React.Component {
     };
   }
 
+  increase = () => {
+    this.setState({ count: this.state.count + 1 })
+  }
+
+  //! 3-) Called when the component is mounted (right after the first render).
+  //! Used for tasks like fetching data.
+  //! Called only once in the lifecycle.
+
+  componentDidMount() {
+    console.log("Component mounted");
+  }
+
+  //! 4-) Called right after the component is updated and re-rendered.
+  //! Can access the updated state or props.
+
+  componentDidUpdate() {
+    console.log("Component updated");
+  }
+
+  //! 5-) Called before the component is removed from the DOM.
+
+  componentWillUnmount() {
+    console.log("Component unmounted");
+  }
+
+
   //! 2
   render() {
     console.log("component rendered");
