@@ -15,6 +15,10 @@ const Home = () => {
         setAppointments(filteredList);
     }
 
+    const handleDoubleClick = (id) => {
+        const updatedList = appointments.map(app => app.id === id ? { ...app, consulted: !app.consulted } : item)
+    }
+
     return (
         <main className="text-center mt-2">
             <h1 className="display-5 text-danger">ENC Hospital</h1>
