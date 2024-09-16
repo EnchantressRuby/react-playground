@@ -4,7 +4,7 @@ import Doctors from "../components/Doctors"
 import { appointmentData } from "../helper/data"
 
 const Home = () => {
-    const [appointments, setAppointments] = useState(appointmentData)
+    const [appointments, setAppointments] = useState(JSON.parse(localStorage.getItem("list")) || [] );
 
     const handleAdd = (newAppointment) => {
         setAppointments([...appointments, newAppointment])
