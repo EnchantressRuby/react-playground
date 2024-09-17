@@ -23,11 +23,23 @@
 
 
 import moment from "moment"
+import { useState, useEffect } from "react"
 
 const Clock = () => {
-  return (
-    <div>Clock</div>
-  )
+
+    const [time, setTime] = useState(moment())
+
+    useEffect(() => {
+        const TIME = setInterval(() => {
+            setTime(moment())
+        }, 1000);
+    }, [])
+
+    return (
+        <div>
+            {time.format("HH")}:{time.format("mm")}:{time.format("ss")}
+        </div>
+    )
 }
 
 export default Clock
