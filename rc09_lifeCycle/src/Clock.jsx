@@ -36,12 +36,17 @@ const Clock = () => {
         }, 1000);
 
         //! closing comp
+        //! componentWillUnmout()
         return () => {
             clearInterval(TIME)
         }
     }, [])
 
     //! update comp
+    //! componentDidUpdate()
+    useEffect(() => {
+        alert("alert")
+    }, [counter])
 
     return (
         <div>
