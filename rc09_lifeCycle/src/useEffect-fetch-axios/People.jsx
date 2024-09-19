@@ -12,8 +12,6 @@ const People = () => {
       .then((dat) => setPeople(dat.data))
   }, [])
 
-  console.log("hello");
-
   return (
     <div className="container text-center mt-4">
 
