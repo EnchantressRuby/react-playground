@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import axios from "axios";
 
 const People = () => {
 
@@ -12,17 +13,25 @@ const People = () => {
   // }, [])
 
   //! 2- fetch async await
-  const hold = async () => {
-    const res = await fetch("https://reqres.in/api/users");
-    const dat = await res.json()
+  // const hold = async () => {
+  //   const res = await fetch("https://reqres.in/api/users");
+  //   const dat = await res.json()
 
-    // console.log(dat.data);
-    setPeople(dat.data)
-  }
+  //   // console.log(dat.data);
+  //   setPeople(dat.data)
+  // }
 
+  // useEffect(() => {
+  //   hold();
+  // }, [])
+
+  //! 3- axios
   useEffect(() => {
-    hold();
+    axios
+      .get("https://reqres.in/api/users")
+      .then((res) => setPeople(res.data.data))
   }, [])
+
 
 
   return (
