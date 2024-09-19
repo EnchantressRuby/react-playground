@@ -5,12 +5,26 @@ const People = () => {
   const [people, setPeople] = useState([])
 
   //! 1- fetch, then
+  // useEffect(() => {
+  //   fetch("https://reqres.in/api/users")
+  //     .then((res) => res.json())
+  //     .then((dat) => setPeople(dat.data))
+  // }, [])
 
-  useEffect(() => {
-    fetch("https://reqres.in/api/users")
-      .then((res) => res.json())
-      .then((dat) => setPeople(dat.data))
-  }, [])
+  //! 2- fetch async await
+  const pull = async()=>{
+    const res = await fetch("https://reqres.in/api/users");
+    const dat = await res.json()
+    
+    // console.log(dat.data);
+    setPeople(dat.data)
+
+    useEffect(()=>{
+      pull();
+    })
+  }
+  // pull()
+
 
   return (
     <div className="container text-center mt-4">
