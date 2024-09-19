@@ -12,25 +12,24 @@ const People = () => {
   // }, [])
 
   //! 2- fetch async await
-  const pull = async()=>{
+  const hold = async () => {
     const res = await fetch("https://reqres.in/api/users");
     const dat = await res.json()
-    
+
     // console.log(dat.data);
     setPeople(dat.data)
-
-    useEffect(()=>{
-      pull();
-    })
   }
-  // pull()
+
+  useEffect(() => {
+    hold();
+  }, [])
 
 
   return (
     <div className="container text-center mt-4">
 
       <div className="row">
-        {people.map(({id,avatar,first_name,last_name}) => (
+        {people.map(({ id, avatar, first_name, last_name }) => (
           <div key={id} className="col-12 col-sm-6 col-md-4">
             <img className="rounded" src={avatar} alt="" />
             <h5>{first_name}</h5>
