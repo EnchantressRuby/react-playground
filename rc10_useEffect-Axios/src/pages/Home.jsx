@@ -8,10 +8,23 @@ const Home = () => {
 
   const url = "https://tutorial-api.fullstack.clarusway.com/tutorials/"
 
+  //! GET - READ
+  const getInfo = async () => {
+    const res = await axios.get(url)
+
+    // console.log(res.data)
+    setTutorials(res.data)
+  }
+
+  useEffect(() => {
+    getInfo();
+  }, [])
+
+
   return (
     <div>
       <AddInfo />
-      <InfoList />
+      <InfoList tutorials={tutorials} />
     </div>
   )
 }
