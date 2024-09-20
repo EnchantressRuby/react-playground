@@ -2,7 +2,7 @@ import { AiFillDelete } from "react-icons/ai";
 import { FaEdit } from "react-icons/fa";
 import EditInfo from "./EditInfo"
 
-const InfoList = () => {
+const InfoList = ({ tutorials, deleteInfo }) => {
     return (
         <div className="container mt-4">
             <table className="table table-striped">
@@ -15,23 +15,27 @@ const InfoList = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th>{ }</th>
-                        <td>{ }</td>
-                        <td>{ }</td>
-                        <td className="text-center">
-                            <AiFillDelete
-                                type="button"
-                                size={22}
-                                className="text-danger cursor-pointer" />
+                    {tutorials.map(({ id, title, description }) => (
+                        <tr>
+                            <th>{id}</th>
+                            <td>{title}</td>
+                            <td>{description}</td>
+                            <td className="text-center">
+                                <AiFillDelete
+                                    type="button"
+                                    size={22}
+                                    className="text-danger cursor-pointer"
+                                     />
 
-                            <FaEdit
-                                data-bs-toggle="modal"
-                                data-bs-target="#editModal"
-                                size={20}
-                                className="me-2 text-warning cursor-pointer" />
-                        </td>
-                    </tr>
+                                <FaEdit
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#editModal"
+                                    size={20}
+                                    className="me-2 text-warning cursor-pointer" />
+                            </td>
+                        </tr>
+                    ))}
+
                 </tbody>
             </table>
         </div>

@@ -20,11 +20,18 @@ const Home = () => {
     getInfo();
   }, [])
 
+  //! DELETE
+
+  const deleteInfo=async(id)=>{
+    await axios.delete(`${url}/${id}/`)
+  }
+
+
 
   return (
     <div>
       <AddInfo />
-      <InfoList tutorials={tutorials} />
+      <InfoList deleteInfo={deleteInfo} tutorials={tutorials} />
     </div>
   )
 }
