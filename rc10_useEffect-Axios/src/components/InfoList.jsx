@@ -37,3 +37,5 @@ const InfoList = () => {
         </div>
     )
 }
+
+export default InfoList
