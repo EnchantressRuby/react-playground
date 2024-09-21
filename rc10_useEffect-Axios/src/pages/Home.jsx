@@ -31,6 +31,7 @@ const Home = () => {
   //! POST
   const postInfo = async (newData) => {
     await axios.post(url, newData)
+    getInfo()
   }
 
 

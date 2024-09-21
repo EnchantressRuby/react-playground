@@ -1,12 +1,12 @@
 import { useState } from "react"
 
-const AddInfo = ({ postData }) => {
+const AddInfo = ({ postInfo }) => {
     const [titl, setTitl] = useState("")
     const [desc, setDesc] = useState("")
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        postData({ title: titl, description: desc })
+        postInfo({ title: titl, description: desc })
     }
 
     return (
