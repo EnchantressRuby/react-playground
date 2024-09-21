@@ -20,12 +20,18 @@ const Home = () => {
     getInfo();
   }, [])
 
-  //! DELETE
 
-  const deleteInfo=async(id)=>{
+  //! DELETE
+  const deleteInfo = async (id) => {
     await axios.delete(`${url}${id}/`)
+    getInfo()
   }
 
+
+  //! POST
+  const postInfo = () => {
+
+  }
 
 
   return (
