@@ -1,12 +1,12 @@
 import { useState } from "react"
 
-const AddInfo = () => {
-    const [title, setTitle] = useState("")
+const AddInfo = ({ postData }) => {
+    const [titl, setTitl] = useState("")
     const [desc, setDesc] = useState("")
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        
+        postData({ title: titl, description: desc })
     }
 
     return (
@@ -18,7 +18,7 @@ const AddInfo = () => {
                     <input type="text" className="form-control"
                         id="title"
                         placeholder="Enter your title"
-                        onChange={(e) => setTitle(e.target.value)}
+                        onChange={(e) => setTitl(e.target.value)}
                         required />
                 </div>
                 <div className="mb-3">

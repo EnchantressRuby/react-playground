@@ -29,14 +29,14 @@ const Home = () => {
 
 
   //! POST
-  const postInfo = () => {
-
+  const postInfo = async (newData) => {
+    await axios.post(url, newData)
   }
 
 
   return (
     <div>
-      <AddInfo />
+      <AddInfo postInfo={postInfo}/>
       <InfoList deleteInfo={deleteInfo} tutorials={tutorials} />
     </div>
   )
