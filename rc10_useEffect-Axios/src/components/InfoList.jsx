@@ -25,6 +25,7 @@ const InfoList = ({ tutorials, deleteInfo }) => {
                                     type="button"
                                     size={22}
                                     className="text-danger cursor-pointer"
+                                    onClick={()=>deleteInfo(id)}
                                      />
 
                                 <FaEdit

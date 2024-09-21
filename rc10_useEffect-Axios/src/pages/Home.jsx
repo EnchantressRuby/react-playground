@@ -23,7 +23,7 @@ const Home = () => {
   //! DELETE
 
   const deleteInfo=async(id)=>{
-    await axios.delete(`${url}/${id}/`)
+    await axios.delete(`${url}${id}/`)
   }
 
 
