@@ -39,6 +39,7 @@ const InfoList = ({ tutorials, deleteInfo }) => {
 
                 </tbody>
             </table>
+            <EditInfo />
         </div>
     )
 }
