@@ -35,10 +35,18 @@ const Home = () => {
   }
 
 
+  //! PUT - UPDATE
+
+  const putInfo = async (editItem) => {
+    await axios.put(`${url}${editItem.id}/`, editItem)
+    getInfo()
+  }
+
+
   return (
     <div>
-      <AddInfo postInfo={postInfo}/>
-      <InfoList deleteInfo={deleteInfo} tutorials={tutorials} />
+      <AddInfo postInfo={postInfo} />
+      <InfoList deleteInfo={deleteInfo} tutorials={tutorials} putInfo={putInfo} />
     </div>
   )
 }
