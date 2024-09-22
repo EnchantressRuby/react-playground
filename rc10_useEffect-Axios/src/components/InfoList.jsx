@@ -1,8 +1,12 @@
 import { AiFillDelete } from "react-icons/ai";
 import { FaEdit } from "react-icons/fa";
 import EditInfo from "./EditInfo"
+import { useState } from "react";
 
 const InfoList = ({ tutorials, deleteInfo }) => {
+
+    const [editItem, setEditItem] = useState("")
+
     return (
         <div className="container mt-4">
             <table className="table table-striped">
@@ -25,21 +29,22 @@ const InfoList = ({ tutorials, deleteInfo }) => {
                                     type="button"
                                     size={22}
                                     className="text-danger cursor-pointer"
-                                    onClick={()=>deleteInfo(id)}
-                                     />
+                                    onClick={() => deleteInfo(id)}
+                                />
 
                                 <FaEdit
                                     data-bs-toggle="modal"
                                     data-bs-target="#editModal"
                                     size={20}
-                                    className="me-2 text-warning cursor-pointer" />
+                                    className="me-2 text-warning cursor-pointer"
+                                    onClick={() => setEditItem({ id, title, description })} />
                             </td>
                         </tr>
                     ))}
 
                 </tbody>
             </table>
-            <EditInfo />
+            <EditInfo editItem={editItem} setEditItem={setEditItem} />
         </div>
     )
 }

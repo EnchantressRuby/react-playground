@@ -1,4 +1,4 @@
-const EditInfo = () => {
+const EditInfo = (editItem,setEditItem) => {
     return (
         <div
             className="modal fade"
