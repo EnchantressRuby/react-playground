@@ -1,4 +1,4 @@
-const EditInfo = ({editItem, setEditItem, putInfo}) => {
+const EditInfo = ({ editItem, setEditItem, putInfo }) => {
     return (
         <div
             className="modal fade"
@@ -52,7 +52,7 @@ const EditInfo = ({editItem, setEditItem, putInfo}) => {
                                 className="btn btn-secondary"
                                 type="button"
                                 data-bs-dismiss="modal"
-                                onClick={()=>putInfo(editItem)}>
+                                onClick={() => putInfo(editItem)}>
                                 Save
                             </button>
                         </div>

@@ -21,7 +21,7 @@ const AddInfo = ({ postInfo }) => {
                     <input type="text" className="form-control"
                         id="title"
                         placeholder="Enter your title"
-                        onChange={(e) => setTitl(e.target.value)} 
+                        onChange={(e) => setTitl(e.target.value)}
                         value={titl}
                         required />
                 </div>
@@ -30,7 +30,7 @@ const AddInfo = ({ postInfo }) => {
                     <input type="text" className="form-control"
                         id="desc"
                         placeholder="Enter your title"
-                        onChange={(e) => setDesc(e.target.value)} 
+                        onChange={(e) => setDesc(e.target.value)}
                         value={desc}
                         required />
                 </div>
