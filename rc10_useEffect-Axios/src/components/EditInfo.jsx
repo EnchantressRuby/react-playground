@@ -1,4 +1,4 @@
-const EditInfo = (editItem,setEditItem) => {
+const EditInfo = (editItem, setEditItem) => {
     return (
         <div
             className="modal fade"
@@ -30,7 +30,9 @@ const EditInfo = (editItem,setEditItem) => {
                             <input
                                 type="text" className="form-control"
                                 id="title"
-                                placeholder="Enter your title" />
+                                placeholder="Enter your title"
+                                value={editItem.title}
+                                onChange={(e) => setEditItem({ ...editItem, title: e.target.value })} />
                         </div>
                         <div className="mb-3">
                             <label
@@ -41,7 +43,8 @@ const EditInfo = (editItem,setEditItem) => {
                             <input
                                 type="text" className="form-control"
                                 id="desc"
-                                placeholder="Enter your description" />
+                                placeholder="Enter your description"
+                                value={editItem.description} />
                         </div>
                         <div className="modal-footer">
                             <button
