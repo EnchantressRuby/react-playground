@@ -7,6 +7,9 @@ const AddInfo = ({ postInfo }) => {
     const handleSubmit = (e) => {
         e.preventDefault()
         postInfo({ title: titl, description: desc })
+
+        setTitl("")
+        setDesc("")
     }
 
     return (
