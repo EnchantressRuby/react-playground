@@ -31,7 +31,7 @@ const MyNavbar = () => {
               to="/teacher"
               className="nav-link"
             >
-              Teacher
+              Teachers
             </NavLink>
             <NavLink
               style={({ isActive }) => ({
