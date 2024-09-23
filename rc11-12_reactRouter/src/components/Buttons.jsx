@@ -2,7 +2,7 @@ import React from 'react'
 import { Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
-const Button = () => {
+const Buttons = () => {
   const navigate=useNavigate()
   
   return (
@@ -19,4 +19,4 @@ const Button = () => {
   );
 }
 
-export default Button
+export default Buttons

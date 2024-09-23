@@ -1,5 +1,5 @@
 import Slider from "../components/Slider"
-import Button from "../components/Button"
+import Button from "../components/Buttons"
 
 const Home = () => {
     return (
