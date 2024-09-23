@@ -3,7 +3,7 @@ import { Container } from 'react-bootstrap'
 import notFound from "../img/notFound.jpeg"
 import { useNavigate } from 'react-router-dom'
 const NotFound = () => {
-const navigateee =useNavigate()
+const navigate =useNavigate()
 
 
   return (
@@ -11,7 +11,7 @@ const navigateee =useNavigate()
       <img src={notFound} alt="" width="550px" />
 
      
-        <button onClick={()=>navigateee("/")} className="btn btn-info">GO HOME</button>
+        <button onClick={()=>navigate("/")} className="btn btn-info">GO HOME</button>
     
     </Container>
   );

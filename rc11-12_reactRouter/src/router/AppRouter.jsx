@@ -20,7 +20,7 @@ const AppRouter =() => {
                     <Route path="/contact" element={<ContactForm />} />
                     <Route path="/paths" element={<Paths />} />
 
-                    <Route path="" element={<NotFound/>} />
+                    <Route path="*" element={<NotFound/>} />
 
                 </Routes>
             </BrowserRouter>
