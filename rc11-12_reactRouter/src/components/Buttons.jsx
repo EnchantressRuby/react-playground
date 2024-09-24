@@ -13,8 +13,8 @@ const Buttons = () => {
       >
         LOGIN
       </Button>
-      <Button className="btn btn-danger p-4 m-2 w-25">CLOSE</Button>
-      <Button className="btn btn-danger p-4 m-2 w-25">DELETE</Button>
+      <Button className="btn btn-danger p-4 m-2 w-25">Close</Button>
+      <Button className="btn btn-danger p-4 m-2 w-25">Delete</Button>
     </div>
   );
 }
