@@ -4,8 +4,10 @@ import Card from "react-bootstrap/Card";
 import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
 import data from "../data"
+import { useNavigate } from "react-router-dom";
 
 const CourseCard = () => {
+    const navigate = useNavigate()
     return (
         <Container>
             <Row className="g-3 text-center">
@@ -18,7 +20,8 @@ const CourseCard = () => {
                                 <Card.Body>
                                     <Card.Title>{name}</Card.Title>
                                     <Card.Text>{text}</Card.Text>
-                                    <Button variant="primary">DETAILS</Button>
+                                    <Button 
+                                    onClick={()=>navigate(`/courses/${name}`)} variant="primary">DETAILS</Button>
                                 </Card.Body>
                             </Card>
                         </Col>

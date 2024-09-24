@@ -3,7 +3,7 @@ import { Navigate, Outlet } from 'react-router-dom'
 
 const PrivateRouter = () => {
 
-  return JSON.parse(localStorage.getItem("EMAIL")) === "ipek" &&
+  return JSON.parse(localStorage.getItem("EMAIL")) === "ruby" &&
     JSON.parse(localStorage.getItem("PASS")) === "1234" ? (
     <Outlet />
   ) : (
