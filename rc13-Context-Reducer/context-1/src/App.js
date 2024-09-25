@@ -9,10 +9,16 @@ export const StudentContext = createContext()
 
 const App = () => {
   const [students, setStudents] = useState(data)
+
+  const changeColor = (id, newColor) => {
+    setStudents(students.map((a) => a.id === id ? { ...a, color: newColor} : a))
+  }
+
   return (
+
     <div>
 
-      <StudentContext.Provider value={{ students }}>
+      <StudentContext.Provider value={{ students, changeColor }}>
         <Home />
       </StudentContext.Provider>
 
