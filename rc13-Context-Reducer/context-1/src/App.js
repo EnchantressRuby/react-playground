@@ -7,7 +7,11 @@ import { createContext } from 'react';
 export const StudentContext=createContext()
 
 const App = () => {
-
+return (
+  <div>
+    <Home />
+  </div>
+)
 }
 
 export default App
