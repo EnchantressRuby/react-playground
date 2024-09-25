@@ -1,6 +1,6 @@
 import React from 'react'
 
-import AnaUser from "./AnaUser";
+import MainUser from "./MainUser";
 import { useContext } from 'react';
 import { UserContext } from '../context/UserProvider';
 const Names = () => {
