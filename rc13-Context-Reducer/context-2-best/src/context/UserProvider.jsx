@@ -20,7 +20,7 @@ const UserProvider = ({ children }) => {
 
 
   return (
-    <UserContext.Provider value={{}}>
+    <UserContext.Provider value={{users}}>
       {children}
     </UserContext.Provider>
 

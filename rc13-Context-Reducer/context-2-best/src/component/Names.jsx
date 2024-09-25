@@ -7,7 +7,7 @@ import { UserContext } from '../context/UserProvider';
 
 const Names = () => {
 
-  // const {users} = useContext(UserContext)
+  const {users} = useContext(UserContext)
 
   return (
     <div>
