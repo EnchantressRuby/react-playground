@@ -4,34 +4,26 @@ import { useState } from 'react'
 import { createContext } from 'react'
 
 
-
 //! 1- creating context
-export const UserContext=createContext()
+export const UserContext = createContext()
+
 //! 2- Provider
-const UserProvider = ({children}) => {
+const UserProvider = ({ children }) => {
 
-const[users,setUsers]=useState([])
+  const [users, setUsers] = useState([])
 
-useEffect(()=>{
-fetch("https://api.github.com/users").then((res)=>res.json()).then((dat)=>setUsers(dat)  )
-},[])
-
-
-const changeWidth=(id,widtH)=>{
-
-
-setUsers(users.map((a)=>a.id===id  ? {...a, width: widtH} : a))
-
-
-}
-
-
+  useEffect(() => {
+    fetch("https://api.github.com/users")
+    .then((res) => res.json())
+    .then((dat) =>setUsers(dat))
+  },[])
 
 
   return (
-    <UserContext.Provider value={{users,changeWidth}}>
-{children}
+    <UserContext.Provider value={{}}>
+      {children}
     </UserContext.Provider>
+
   )
 }
 

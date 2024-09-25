@@ -1,14 +1,14 @@
 import React from 'react'
-import GosterUsers from './pages/GosterUsers'
-import KullaniciProvider from './context/KullaniciProvider'
+import ShowUser from './pages/ShowUser'
+import UserProvider from './context/UserProvider'
 
 
 const App = () => {
   return (
     <div>
-      <KullaniciProvider>
-        <GosterUsers />
-      </KullaniciProvider>
+      <UserProvider>
+        <ShowUser />
+      </UserProvider>
     </div>
   );
 }
