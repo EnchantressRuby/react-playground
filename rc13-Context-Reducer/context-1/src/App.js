@@ -4,14 +4,20 @@ import data from "./data"
 import { useState } from 'react';
 import { createContext } from 'react';
 
-export const StudentContext=createContext()
+//! context area
+export const StudentContext = createContext()
 
 const App = () => {
-return (
-  <div>
-    <Home />
-  </div>
-)
+  const [students, setStudents] = useState(data)
+  return (
+    <div>
+
+      <StudentContext.Provider value={{ students }}>
+        <Home />
+      </StudentContext.Provider>
+
+    </div>
+  )
 }
 
 export default App
