@@ -44,9 +44,7 @@ const handleSubmit=(e)=>{
             id="desc"
             placeholder="Enter your password"
             required
-
             onChange={(e)=>setPass(e.target.value)}
-            
           />
         </div>
         <button type="submit" className="btn btn-danger mb-4">

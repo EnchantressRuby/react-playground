@@ -3,8 +3,7 @@ import { Navigate, Outlet } from 'react-router-dom'
 
 const PrivateRouter = () => {
 
-  return JSON.parse(localStorage.getItem("EMAIL")) === "ruby" &&
-    JSON.parse(localStorage.getItem("PASS")) === "1234" ? (
+  return JSON.parse(localStorage.getItem("EAIL")) === "ruby" ? (
     <Outlet />
   ) : (
     <Navigate to="/login" />
