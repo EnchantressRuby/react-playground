@@ -14,13 +14,17 @@ const UserProvider = ({ children }) => {
 
   useEffect(() => {
     fetch("https://api.github.com/users")
-    .then((res) => res.json())
-    .then((dat) =>setUsers(dat))
-  },[])
+      .then((res) => res.json())
+      .then((dat) => setUsers(dat))
+  }, [])
+
+  const changeWidth = (id, widthh) => {
+    setUsers(users.map((a) => a.id === id ? { ...a, width: widthh } : a))
+  }
 
 
   return (
-    <UserContext.Provider value={{users}}>
+    <UserContext.Provider value={{ users, changeWidth }}>
       {children}
     </UserContext.Provider>
 
