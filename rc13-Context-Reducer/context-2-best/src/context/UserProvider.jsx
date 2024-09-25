@@ -6,14 +6,14 @@ import { createContext } from 'react'
 
 
 //! 1- creating context
-export const KullaniciContext=createContext()
+export const UserContext=createContext()
 //! 2- Provider
-const KullaniciProvider = ({children}) => {
+const UserProvider = ({children}) => {
 
 const[users,setUsers]=useState([])
 
 useEffect(()=>{
-fetch("https://api.github.com/users").then((res)=>res.json()).then((veri)=>setUsers(veri)  )
+fetch("https://api.github.com/users").then((res)=>res.json()).then((dat)=>setUsers(dat)  )
 },[])
 
 
@@ -29,10 +29,10 @@ setUsers(users.map((a)=>a.id===id  ? {...a, width: widtH} : a))
 
 
   return (
-    <KullaniciContext.Provider value={{users,changeWidth}}>
+    <UserContext.Provider value={{users,changeWidth}}>
 {children}
-    </KullaniciContext.Provider>
+    </UserContext.Provider>
   )
 }
 
-export default KullaniciProvider
+export default UserProvider

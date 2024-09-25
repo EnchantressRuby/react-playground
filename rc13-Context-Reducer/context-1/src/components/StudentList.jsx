@@ -8,7 +8,7 @@ const StudentList = () => {
         alt=""
       />
 
-      <h2 style={{background: "pink" }}>Student List</h2>
+      <h2 style={{background: "whitesmoke", padding:"1rem", color:"maroon"}}>Student List</h2>
 
       <StudentItem />
     </div>
