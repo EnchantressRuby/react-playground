@@ -1,11 +1,11 @@
 import React from "react";
-import OgrenciList from "./OgrenciList";
+import StudentList from "./StudentList";
 
 const Home = () => {
 return(
   <div>
     <h1 style={{textAlign:"center", color:"red"}}>School Administration</h1>
-    <OgrenciList/>
+    <StudentList/>
   </div>
 )
 };
