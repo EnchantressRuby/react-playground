@@ -16,6 +16,7 @@ const App = () => {
 
   return (
 
+    //! provider
     <div>
 
       <StudentContext.Provider value={{ students, changeColor }}>
