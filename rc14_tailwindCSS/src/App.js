@@ -1,4 +1,5 @@
 import Typography from "./components/Typography"
+import SpacingAndSizing from "./components/SpacingAndSizing"
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
         Hi Tailwind
       </h1>
       <Typography />
+      <SpacingAndSizing />
     </div>
   );
 }
