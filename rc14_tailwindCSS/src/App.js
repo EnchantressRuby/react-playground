@@ -3,14 +3,16 @@ import SpacingAndSizing from "./components/SpacingAndSizing"
 import HoverAndFocus from "./components/HoverAndFocus";
 import FlexAndResponsive from "./components/FlexAndResponsive";
 import Navbar from "./components/Navbar";
+import ProfileCard from "./components/ProfileCard";
 
 function App() {
   return (
     <div className="dark:bg-gray-600 min-h-screen">
       <Navbar />
-      <h1 className="text-2xl text-center text-purple-700 dark:text-white font-bold">
+      <h1>
         Hi Tailwind
       </h1>
+      <ProfileCard />
       <FlexAndResponsive />
       <HoverAndFocus />
       <SpacingAndSizing />
