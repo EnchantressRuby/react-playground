@@ -86,7 +86,7 @@ const Login = () => {
             </span>
 
             <span className="text-main text-[14px] font-montsrrat font-[500] underline ml-1">
-              Reset your password?
+              Reset your password here
             </span>
           </div>
         </form>
