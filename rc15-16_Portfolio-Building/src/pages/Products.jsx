@@ -24,8 +24,10 @@ const Products = () => {
       <h2 className="text-2xl font-bold mt-8 tracking-tight text-gray-900">
         All products
       </h2>
-      <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-10 xl:gap-x-8">
-        {products.map(product => <ProductCard key={products.id} product={product} /> )}
+      <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-10 xl:gap-x-8 ">
+        {products.map((product) => (
+          <ProductCard key={product.id} product={product} />
+        ))}
       </div>
     </div>
   )
