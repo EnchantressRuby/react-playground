@@ -22,7 +22,7 @@ const Login = () => {
       <div className="h-[500px] w-11/12 sm:w-[475] bg-white rounded-[20px] p-5 flex flex-col justify-center text-center">
 
         <div className="flex justify-center items-center mt-2 gap-2">
-          <span className="w-[6px] h-[39px] bg-yellow-500"></span>
+          <span className="w-[6px] h-[39px] bg-red-800"></span>
           <h1 className="text-[22px] sm:text-[32px] font-montserrat font-[700] uppercase">Kovach Store</h1>
         </div>
 
