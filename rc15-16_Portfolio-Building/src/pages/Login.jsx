@@ -75,7 +75,7 @@ const Login = () => {
               id="password"
               placeholder="Enter your password"
               required
-              onChange={(e) => setEmail(e.target.value)} />
+              onChange={(e) => setPass(e.target.value)} />
           </div>
 
           <button className="bg-main h-[44px] font-montserrat text-label text-white upercase hover:opacity-90 rounded-[4px]">
