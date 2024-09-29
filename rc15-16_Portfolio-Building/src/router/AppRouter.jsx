@@ -8,6 +8,7 @@ import Navbar from '../components/Navbar'
 import PrivateRouter from './PrivateRouter'
 import ProductDetail from '../pages/ProductDetail'
 
+
 const AppRouter = () => {
   return (
 
