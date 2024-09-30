@@ -1,10 +1,28 @@
-import React from "react";
-import { Navigate, useLocation, useNavigate } from "react-router-dom";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { Navigate, useLocation, useNavigate, useParams } from "react-router-dom";
 
 const ProductDetail = () => {
   const navigate = useNavigate()
-  const { state } = useLocation()
+  // const { state } = useLocation()
   const { thumbnail, title, description, category, price, images } = state
+
+  const [state, setState] = useState({})
+  const {id} = useParams()
+
+  const getDetailData = async () => {
+    try {
+      const { data } = await axios.get(`https://dummyjson.com/products/${id}`)
+      setState(data)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+  useEffect(() => {
+    getDetailData();
+
+  }, [])
 
   return (
     <div className="mx-auto max-w-2xl px-4 pt-8 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
@@ -15,7 +33,7 @@ const ProductDetail = () => {
               <img className="h-full w-full rounded-lg" src={thumbnail} alt={title} />
             </div>
             <div className="grid grid-cols-3 gap-4 row-span-1">
-              {images.slice(0, 3).map((item, i) => (
+              {images?.slice(0, 3).map((item, i) => (
                 <div key={i}>
                   <img
                     className="h-[15vh] w-full rounded-lg"
