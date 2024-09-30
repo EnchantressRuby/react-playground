@@ -5,7 +5,7 @@ import Loading from "../components/Loading";
 import SearchInput from "../components/SearchInput";
 import { useProductsContext } from "../context/ProductProvider";
 // import { useProductsContext } from "../context/ProductProvider";
-// import ScrollToTop from "../components/ScrollToTop";
+import ScrollToTop from "../components/ScrollUp";
 
 const Products = () => {
   // const [products, setProducts] = useState([])
@@ -51,7 +51,7 @@ const Products = () => {
           Couldn't find the product you were looking for.
         </h2>
       )}
-      {/* <ScrollToTop /> */}
+      <ScrollToTop />
     </div>
   );
 }
