@@ -17,7 +17,7 @@ const UseStateExample = () => {
         setLoading(false);
       })
       .catch(() => {
-        setError("DİKKAT URL DE HATA VAR");
+        setError("Attention, there is an error in the URL!");
         setLoading(false);
       });
   };
