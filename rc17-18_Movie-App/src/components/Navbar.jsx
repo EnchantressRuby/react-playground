@@ -13,7 +13,7 @@ import SwitchButton from "./SwitchButton";
 
 export default function Navbar() {
   // const { logOut, currentUser } = useAuthContext();
-  // const currentUser = { displayName: "ruby kovach" };
+  const currentUser = { displayName: "ruby kovach" };
   // const currentUser = false;
   return (
     <>
@@ -41,7 +41,7 @@ export default function Navbar() {
                     <span className="sr-only">Open user menu</span>
                     <img
                       alt=""
-                      // src={currentUser?.photoURL || avatar}
+                      src={currentUser?.photoURL || avatar}
                       className="h-8 w-8 rounded-full"
                       referrerPolicy="no-referrer"
                     />
@@ -51,7 +51,7 @@ export default function Navbar() {
                   transition
                   className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in"
                 >
-                  {/* {!currentUser && (
+                  {!currentUser && (
                     <>
                       <MenuItem>
                         <Link
@@ -70,17 +70,17 @@ export default function Navbar() {
                         </Link>
                       </MenuItem>
                     </>
-                  )} */}
-                  {/* {currentUser && (
+                  )}
+                  {currentUser && (
                     <MenuItem>
                       <span
-                        onClick={logOut}
+                        // onClick={logOut}
                         className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 cursor-pointer"
                       >
                         Log out
                       </span>
                     </MenuItem>
-                  )} */}
+                  )}
                 </MenuItems>
               </Menu>
             </div>
