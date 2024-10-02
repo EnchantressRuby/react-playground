@@ -1,5 +1,6 @@
 import { createUserWithEmailAndPassword } from 'firebase/auth'
 import React, { createContext, useContext, useState } from 'react'
+import { auth } from '../auth/firebase'
 
 export const AuthContext = createContext()
 
@@ -11,11 +12,13 @@ export const useAuthContext = () => {
 const AuthProvider = ({ children }) => {
     const [currentUser, setCurrentUser] = useState(false)
 
-    const createUser = async () => {
+    const createUser = async (email, password) => {
         try {
-            createUserWithEmailAndPassword(auth, email, password)
+            //? create new user firebase method
+            let userCredential = await createUserWithEmailAndPassword(auth, email, password)
+            console.log(userCredential)
         } catch (error) {
-
+            console.log(error)
         }
     }
 
