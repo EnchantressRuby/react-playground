@@ -2,6 +2,7 @@ import { createUserWithEmailAndPassword } from 'firebase/auth'
 import React, { createContext, useContext, useState } from 'react'
 import { auth } from '../auth/firebase'
 import { useNavigate } from 'react-router-dom'
+import { toastErrorNotify, toastSuccessNotify } from '../helper/ToastNotify'
 
 export const AuthContext = createContext()
 
@@ -20,9 +21,10 @@ const AuthProvider = ({ children }) => {
             let userCredential = await createUserWithEmailAndPassword(auth, email, password)
             console.log(userCredential)
             navigate("/login")
-            console.log("Registration successful.")
+            toastSuccessNotify("Registration successful.")
+
         } catch (error) {
-            console.log(error)
+            toastErrorNotify(error.message)
         }
     }
 
