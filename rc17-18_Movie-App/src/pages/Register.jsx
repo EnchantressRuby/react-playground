@@ -3,21 +3,24 @@ import GoogleIcon from "../assets/icons/GoogleIcon";
 import { useAuthContext } from "../context/AuthProvider";
 
 const Register = () => {
-  const { createUser } = useAuthContext()
+  const { createUser, googleProvider } = useAuthContext();
   const [info, setInfo] = useState({
     firstName: "",
     lastName: "",
     email: "",
-    password: ""
-  })
+    password: "",
+  });
 
-  const handleChange = (e) => setInfo({ ...info, [e.target.name]: e.target.value })
+  const handleChange = (e) =>
+    setInfo({ ...info, [e.target.name]: e.target.value });
 
-  const { email, password } = info
+  const { email, password, firstName, lastName } = info;
+
   const handleSubmit = (e) => {
-    e.preventDefault()
-    // createUser(email, password)
-  }
+    const displayName = `${firstName} ${lastName}`;
+    e.preventDefault();
+    createUser(email, password, displayName);
+  };
   return (
     <div className="flex justify-center">
       <div className="overflow-hidden flex-1 h-screen justify-center items-center dark:bg-gray-dark-main">
@@ -57,7 +60,7 @@ const Register = () => {
                 required
                 onChange={handleChange}
               />
-              <label htmlFor="email">Email</label>
+              <label htmlFor="floating_email">Email</label>
             </div>
             <div className="relative z-0 w-full mb-6 group">
               <input
@@ -76,6 +79,7 @@ const Register = () => {
             <button
               className="flex justify-between text-center items-center btn-danger"
               type="button"
+              onClick={googleProvider}
             >
               Continue with Google
               <GoogleIcon color="currentColor" />

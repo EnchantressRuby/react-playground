@@ -6,14 +6,13 @@ import {
   MenuItems,
 } from "@headlessui/react";
 import { Link } from "react-router-dom";
-// import SwitchButton from "./SwitchButton";
-import avatar from "../assets/icons/avatar.png";
 import SwitchButton from "./SwitchButton";
-// import { useAuthContext } from "../context/AuthProvider";
+import avatar from "../assets/icons/avatar.png";
+import { useAuthContext } from "../context/AuthProvider";
 
 export default function Navbar() {
-  // const { logOut, currentUser } = useAuthContext();
-  const currentUser = { displayName: "ruby kovach" };
+  const { logOut, currentUser } = useAuthContext();
+  // const currentUser = { displayName: "ruby kovach" };
   // const currentUser = false;
   return (
     <>
@@ -28,11 +27,11 @@ export default function Navbar() {
             </Link>
 
             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-              {/* {currentUser && (
+              {currentUser && (
                 <h5 className="mr-2 capitalize ">
                   {currentUser?.displayName}{" "}
                 </h5>
-              )} */}
+              )}
               <SwitchButton />
               {/* Profile dropdown */}
               <Menu as="div" className="relative">
@@ -74,7 +73,7 @@ export default function Navbar() {
                   {currentUser && (
                     <MenuItem>
                       <span
-                        // onClick={logOut}
+                        onClick={logOut}
                         className="block px-4 py-2 text-sm text-gray-700 data-[focus]:bg-gray-100 cursor-pointer"
                       >
                         Log out
