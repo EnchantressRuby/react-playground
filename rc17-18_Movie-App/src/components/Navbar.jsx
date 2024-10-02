@@ -8,6 +8,7 @@ import {
 import { Link } from "react-router-dom";
 // import SwitchButton from "./SwitchButton";
 import avatar from "../assets/icons/avatar.png";
+import SwitchButton from "./SwitchButton";
 // import { useAuthContext } from "../context/AuthProvider";
 
 export default function Navbar() {
@@ -32,7 +33,7 @@ export default function Navbar() {
                   {currentUser?.displayName}{" "}
                 </h5>
               )} */}
-              {/* <SwitchButton /> */}
+              <SwitchButton />
               {/* Profile dropdown */}
               <Menu as="div" className="relative">
                 <div>
