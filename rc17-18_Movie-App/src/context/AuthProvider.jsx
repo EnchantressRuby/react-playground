@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword } from 'firebase/auth'
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth'
 import React, { createContext, useContext, useState } from 'react'
 import { auth } from '../auth/firebase'
 import { useNavigate } from 'react-router-dom'
@@ -28,12 +28,29 @@ const AuthProvider = ({ children }) => {
         }
     }
 
-    const values = { currentUser, createUser }
+    //*https://console.firebase.google.com/
+    //* => Authentication => sign-in-method => enable Email/pass
+
+    const signIn = async (email, password) => {
+        try {
+            //? user sign in firebase method
+            let userCredential = await signInWithEmailAndPassword(auth, email, password)
+            console.log(userCredential)
+            navigate("/")
+            toastSuccessNotify("Login successful.")
+
+        } catch (error) {
+            toastErrorNotify(error.message)
+        }
+    }
+
+    const values = { currentUser, createUser, signIn  }
     return (
         <AuthContext.Provider value={values}>
             {children}
         </AuthContext.Provider>
     )
 }
+
 
 export default AuthProvider
