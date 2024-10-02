@@ -5,7 +5,10 @@ import { useAuthContext } from "../context/AuthProvider";
 const Register = () => {
   const { createUser } = useAuthContext()
   const [info, setInfo] = useState({
-    firstName: "", lastName: "", email: "", password: ""
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: ""
   })
 
   const handleChange = (e) => setInfo({ ...info, [e.target.name]: e.target.value })
