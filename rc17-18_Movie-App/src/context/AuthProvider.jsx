@@ -97,6 +97,7 @@ const AuthProvider = ({ children }) => {
     //* => Authentication => sign-in-method => enable Google
 
     //* => Authentication => settings => Authorized domains => add domain
+    //! to run google sign-in add deploy link to domain list after deploy the project
 
     const googleProvider = () => {
         //? log-in with Google firebase method
