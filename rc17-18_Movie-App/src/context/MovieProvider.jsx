@@ -2,12 +2,13 @@ import React, { createContext, useContext, useEffect, useState } from 'react'
 import axios from "axios"
 
 export const MovieContext = createContext()
+
 export const useMovieContext = () => {
-    return useContext(MovieContext)
+    return useContext(MovieContext);
 }
 
 const API_KEY = process.env.REACT_APP_TMDB_KEY;
-const FEATURED_API = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}`
+const FEATURED_API = `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}`
 
 const MovieProvider = ({ children }) => {
     const [movies, setMovies] = useState([])
