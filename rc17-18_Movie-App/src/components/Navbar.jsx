@@ -12,7 +12,7 @@ import { useAuthContext } from "../context/AuthProvider";
 
 export default function Navbar() {
   const { logOut, currentUser } = useAuthContext();
-  // const currentUser = { displayName: "ruby kovach" };
+  // const currentUser = { displayName: "felix franko" };
   // const currentUser = false;
   return (
     <>
