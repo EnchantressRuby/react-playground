@@ -63,7 +63,7 @@ const MuiElem = () => {
                 justifyContent="center"
                 my={4}>
                 <Button variant="text">Text</Button>
-                <Button variant="contained">Contained</Button>
+                <Button variant="contained"color='success'>Contained</Button>
                 <Button variant="outlined" color='error' size='large' startIcon={<DeleteIcon />}>Outlined</Button>
             </Stack>
 
