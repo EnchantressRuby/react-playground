@@ -8,6 +8,7 @@ import Container from '@mui/material/Container'
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
+import DeleteIcon from "@mui/icons-material/Delete"
 
 
 import React from 'react'
@@ -58,10 +59,12 @@ const MuiElem = () => {
 
             <Stack
                 direction={{ xs: 'column', sm: 'row' }}
-                spacing={{ xs: 1, sm: 2, md: 4 }}>
+                spacing={{ xs: 1, sm: 2, md: 4 }}
+                justifyContent="center"
+                my={4}>
                 <Button variant="text">Text</Button>
                 <Button variant="contained">Contained</Button>
-                <Button variant="outlined">Outlined</Button>
+                <Button variant="outlined" color='error' size='large' startIcon={<DeleteIcon />}>Outlined</Button>
             </Stack>
 
 
