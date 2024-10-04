@@ -29,7 +29,13 @@ const MuiElem = () => {
                 <Button variant="outlined">Outlined</Button>
             </Box>
 
-        </Container>
+            <Box display="flex" justifyContent={"center"} alignItems="center" gap={3} marginTop={3}>
+                <Button variant="text">Text</Button>
+                <Button variant="contained">Contained</Button>
+                <Button variant="outlined">Outlined</Button>
+            </Box>
+
+        </Container >
     )
 }
 
