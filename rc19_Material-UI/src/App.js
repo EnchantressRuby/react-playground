@@ -1,15 +1,13 @@
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
-    {/* <Container maxWidth={"xl"}> */}
-    <Container maxWidth={"xxl"}>
+    <Container maxWidth={"x1"}>
       <Typography variant="h3" component="h1" gutterBottom>
-        hello
+        Hello MUI
       </Typography>
-      <Home/>
     </Container>
-    </ThemeProvider>
   );
 }
 
