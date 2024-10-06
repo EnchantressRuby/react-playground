@@ -39,10 +39,17 @@ const MuiElem = () => {
                 sx={{ border: "3px solid black", backgroundColor: "maroon" }}>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste deleniti nisi consequuntur magni facere nesciunt voluptatibus, maxime nobis dicta, ipsam ullam quia sapiente illum? Perferendis.
             </Typography>
+            <Typography
+                align='center'
+                color='purp.light'
+                variant='body1'
+                mt={5}>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste deleniti nisi consequuntur magni facere nesciunt voluptatibus, maxime nobis dicta, ipsam ullam quia sapiente illum? Perferendis.
+            </Typography>
 
             <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", gap: 3, marginTop: 3 }}>
                 <Button variant="text">Text</Button>
-                <Button variant="contained">Contained</Button>
+                <Button variant="contained" color='btnColor'>Contained</Button>
                 <Button variant="outlined">Outlined</Button>
             </Box>
 

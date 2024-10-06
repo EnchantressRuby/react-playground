@@ -18,16 +18,26 @@ const theme = createTheme({
       light: deepPurple["A100"]
     },
     btnColor: {
-      main: "dcad45"
+      main: "#dcad45"
     }
   },
+  breakpoints:{
+    values:{
+      xs:0,
+      sm:500,
+      md:800,
+      lg:1200,
+      xl:1536,
+      xxl:2500,
+    }
+  }
 });
 
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <Container maxWidth={"x1"}>
+      <Container maxWidth={"xx1"}>
         <Typography variant="h3" component="h1" gutterBottom>
           Hello MUI
         </Typography>
