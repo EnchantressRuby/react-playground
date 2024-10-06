@@ -6,6 +6,7 @@ import Input from '@mui/material/Input';
 import InputLabel from '@mui/material/InputLabel';
 import InputAdornment from '@mui/material/InputAdornment';
 import FormControl from '@mui/material/FormControl';
+import AccountCircle from '@mui/icons-material/AccountCircle';
 
 const MuiInputElem = () => {
     return (
@@ -16,18 +17,42 @@ const MuiInputElem = () => {
                 <TextField id="standard-basic" margin='dense' label="Standard" variant="standard" fullWidth />
             </Box>
             <FormControl variant="standard">
-        <InputLabel htmlFor="input-with-icon-adornment">
-          With a start adornment
-        </InputLabel>
-        <Input
-          id="input-with-icon-adornment"
-          startAdornment={
-            <InputAdornment position="start">
-              <AccountCircle />
-            </InputAdornment>
-          }
-        />
-      </FormControl>
+                <InputLabel htmlFor="input-with-icon-adornment">
+                    With a start adornment
+                </InputLabel>
+                <Input
+                    id="input-with-icon-adornment"
+                    startAdornment={
+                        <InputAdornment position="start">
+                            <AccountCircle />
+                        </InputAdornment>
+                    }
+                />
+            </FormControl>
+            <TextField
+                id="input-with-icon-textfield"
+                label="TextField"
+                slotProps={{
+                    input: {
+                        startAdornment: (
+                            <InputAdornment position="start">
+                                <AccountCircle />
+                            </InputAdornment>
+                        ),
+                    },
+                }}
+
+                //? deprecated
+                // inputProps={{ 
+                //     startAdornment: (
+                //         <InputAdornment position="start">
+                //           <AccountCircle />
+                //         </InputAdornment>
+                //       ),
+                // }}
+
+                variant="standard"
+            />
         </Container>
     )
 }
