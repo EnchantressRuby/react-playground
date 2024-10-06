@@ -9,6 +9,26 @@ import FormControl from '@mui/material/FormControl';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import MenuItem from '@mui/material/MenuItem';
+
+const currencies = [
+    {
+        value: 'USD',
+        label: '$',
+    },
+    {
+        value: 'EUR',
+        label: '€',
+    },
+    {
+        value: 'BTC',
+        label: '฿',
+    },
+    {
+        value: 'JPY',
+        label: '¥',
+    },
+];
 
 const MuiInputElem = () => {
 
@@ -60,22 +80,57 @@ const MuiInputElem = () => {
                 variant="standard"
             />
             <FormControl sx={{ m: 1, width: '25ch' }} variant="standart">
-          <InputLabel htmlFor="standart-adornment-password">Password</InputLabel>
-          <Input
-            id="standard-adornment-password"
-            type={showPassword ? 'text' : 'password'}
-            endAdornment={
-              <InputAdornment position="end">
-                <IconButton
-                  aria-label="toggle password visibility"
-                  onClick={handleClickShowPassword}
-                >
-                  {showPassword ? <VisibilityOff /> : <Visibility />}
-                </IconButton>
-              </InputAdornment>
-            }
-          />
-        </FormControl>
+                <InputLabel htmlFor="standart-adornment-password">Password</InputLabel>
+                <Input
+                    id="standard-adornment-password"
+                    type={showPassword ? 'text' : 'password'}
+                    endAdornment={
+                        <InputAdornment position="end">
+                            <IconButton
+                                aria-label="toggle password visibility"
+                                onClick={handleClickShowPassword}
+                            >
+                                {showPassword ? <VisibilityOff /> : <Visibility />}
+                            </IconButton>
+                        </InputAdornment>
+                    }
+                />
+            </FormControl>
+            <Box component="form">
+                <div>
+                    <TextField
+                        id="outlined-select-currency"
+                        select
+                        label="Select"
+                        defaultValue="EUR"
+                        helperText="Please select your currency"
+                    >
+                        {currencies.map((option) => (
+                            <MenuItem key={option.value} value={option.value}>
+                                {option.label}
+                            </MenuItem>
+                        ))}
+                    </TextField>
+                    <TextField
+                        id="outlined-select-currency-native"
+                        select
+                        label="Native select"
+                        defaultValue="EUR"
+                        slotProps={{
+                            select: {
+                                native: true,
+                            },
+                        }}
+                        helperText="Please select your currency"
+                    >
+                        {currencies.map((option) => (
+                            <option key={option.value} value={option.value}>
+                                {option.label}
+                            </option>
+                        ))}
+                    </TextField>
+                </div>
+            </Box>
         </Container>
     )
 }
