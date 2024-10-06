@@ -2,7 +2,8 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Home from './pages/Home';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { green, purple } from '@mui/material/colors';
+import { green, purple, deepPurple } from '@mui/material/colors';
+import { light } from '@mui/material/styles/createPalette';
 
 const theme = createTheme({
   palette: {
@@ -12,6 +13,13 @@ const theme = createTheme({
     secondary: {
       main: green[500],
     },
+    purp: {
+      main: deepPurple["A200"],
+      light: deepPurple["A100"]
+    },
+    btnColor: {
+      main: "dcad45"
+    }
   },
 });
 
