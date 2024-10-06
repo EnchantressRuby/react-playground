@@ -44,9 +44,31 @@ const MuiInputElem = () => {
     return (
         <Container>
             <Box width={500} display="flex" justifyContent="center" flexDirection={"column"}>
-                <TextField type='email' id="outlined-basic" margin='dense' label="Outlined" variant="outlined" fullWidth />
-                <TextField id="filled-basic" margin='dense' label="Filled" variant="filled" fullWidth />
-                <TextField id="standard-basic" margin='dense' label="Standard" variant="standard" fullWidth />
+                <TextField
+                    type='email'
+                    id="outlined-basic"
+                    margin='dense'
+                    label="Outlined"
+                    helperText={false && "Enter a valid E-mail"}
+                    error={false}
+                    variant="outlined"
+                    fullWidth />
+                <TextField
+                    id="filled-basic"
+                    margin='dense'
+                    label="Filled"
+                    helperText={true && "Enter a valid E-mail"}
+                    error={true}
+                    variant="filled"
+                    fullWidth />
+                <TextField
+                    id="standard-basic"
+                    margin='dense'
+                    label="Standard"
+                    helperText={showPassword && "Enter a valid E-mail"}
+                    error={showPassword}
+                    variant="standard"
+                    fullWidth />
             </Box>
             <FormControl variant="standard">
                 <InputLabel htmlFor="input-with-icon-adornment">
