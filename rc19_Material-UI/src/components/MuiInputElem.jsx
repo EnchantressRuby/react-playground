@@ -1,4 +1,4 @@
-import { Container } from '@mui/material'
+import { Container, IconButton } from '@mui/material'
 import React from 'react'
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
@@ -7,8 +7,14 @@ import InputLabel from '@mui/material/InputLabel';
 import InputAdornment from '@mui/material/InputAdornment';
 import FormControl from '@mui/material/FormControl';
 import AccountCircle from '@mui/icons-material/AccountCircle';
+import Visibility from '@mui/icons-material/Visibility';
+import VisibilityOff from '@mui/icons-material/VisibilityOff';
 
 const MuiInputElem = () => {
+
+    const [showPassword, setShowPassword] = React.useState(false);
+    const handleClickShowPassword = () => setShowPassword((show) => !show);
+
     return (
         <Container>
             <Box width={500} display="flex" justifyContent="center" flexDirection={"column"}>
@@ -53,6 +59,23 @@ const MuiInputElem = () => {
 
                 variant="standard"
             />
+            <FormControl sx={{ m: 1, width: '25ch' }} variant="standart">
+          <InputLabel htmlFor="standart-adornment-password">Password</InputLabel>
+          <Input
+            id="standard-adornment-password"
+            type={showPassword ? 'text' : 'password'}
+            endAdornment={
+              <InputAdornment position="end">
+                <IconButton
+                  aria-label="toggle password visibility"
+                  onClick={handleClickShowPassword}
+                >
+                  {showPassword ? <VisibilityOff /> : <Visibility />}
+                </IconButton>
+              </InputAdornment>
+            }
+          />
+        </FormControl>
         </Container>
     )
 }
