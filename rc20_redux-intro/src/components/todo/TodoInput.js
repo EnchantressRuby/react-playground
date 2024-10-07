@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { ekle } from "../../redux/actions/todoActions";
+import { add } from "../../redux/actions/todoActions";
 
 
 const TodoInput = () => {
@@ -12,9 +12,9 @@ const handleSubmit=(e)=>{
 
   e.preventDefault()
 
-  //ekle fonk ihtiyaç var
+  //add func needed
 
-  dispatch(ekle(todo))
+  dispatch(add(todo))
 }
 
 

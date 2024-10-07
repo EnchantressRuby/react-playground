@@ -1,16 +1,16 @@
-// arttir,azalt,sıfırla
+// increase,decrease,reset
 
 
 //! 2
-export const arttir =()=>({
-    type:"ARTTIR", payload1:"ARTTIRILDI"
-    })
-    export const sifirla = () => ({
-      type: "RESET",
-      payload1: "SIFIRLANDI",
-    });
-    
-    export const azalt = () => ({
-      type: "AZALT",
-      
-    });
+export const increase = () => ({
+    type: "increase", payload1: "increased"
+})
+export const reset = () => ({
+    type: "reset",
+    payload1: "reset",
+});
+
+export const decrease = () => ({
+    type: "decrease",
+
+});

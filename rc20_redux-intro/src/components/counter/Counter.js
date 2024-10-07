@@ -1,12 +1,12 @@
 import React from 'react'
 import "./Counter.css"
 import { useDispatch, useSelector } from 'react-redux';
-import { arttir, azalt, sifirla } from '../../redux/actions/counterActions';
+import { increase, decrease, reset } from '../../redux/actions/counterActions';
 
 
 const Counter = () => {
-  //değişkenler useSelector hookuyla çağırılır, fonksiyonlar ise useDispatch ile çağırılır
-const { text, sayac } = useSelector((state) => state.counterReducer);
+
+const { text, counter } = useSelector((state) => state.counterReducer);
 
 const dispatchhh=useDispatch()
 
@@ -16,8 +16,8 @@ const dispatchhh=useDispatch()
     <div className="app">
       <h2 className="counter-header"> Counter With Redux</h2>
 
-      <h1>{sayac} </h1>
-      {/* sayac */}
+      <h1>{counter} </h1>
+      {/* counter */}
 
       <h2>{text} </h2>
       {/* text */}
@@ -25,29 +25,29 @@ const dispatchhh=useDispatch()
       <div>
         <button
           className="counter-button positive"
-          onClick={() => dispatchhh(arttir())}
+          onClick={() => dispatchhh(increase())}
         >
-          ARTTIR
+          increase
         </button>
 
-        {/* arttır fonk */}
+        {/* increase func */}
 
         <button
           className="counter-button "
-          onClick={() => dispatchhh(sifirla())}
+          onClick={() => dispatchhh(reset())}
         >
           RESET
         </button>
 
-        {/* sıfırla fonk */}
+        {/* reset func */}
         <button
           className="counter-button negative"
-          onClick={() => dispatchhh(azalt())}
+          onClick={() => dispatchhh(decrease())}
         >
-          AZALT
+          decrease
         </button>
 
-        {/* azalt fonk */}
+        {/* decrease func */}
       </div>
     </div>
   );

@@ -1,10 +1,10 @@
-//!mutfak
+//!
 
 
 const initial = {
-    gorevler: [
-      { id: 0, yazi: "Redux Çalışıyoruz", completed: false },
-      { id: 1, yazi: "köpekleri gezdir", completed: true },
+    orders: [
+      { id: 0, text: "Redux", completed: false },
+      { id: 1, text: "Take the dogs outside", completed: true },
     ],
   };
   
@@ -14,10 +14,10 @@ const initial = {
   switch (type) {
     
   case "DELETE":
-    return {gorevler:state.gorevler.filter((a)=>a.id !== payload) }
+    return {orders:state.orders.filter((a)=>a.id !== payload) }
   
   case "ADD":
-    return {gorevler: [...state.gorevler, {id:3, yazi:payload , completed: false}]}
+    return {orders: [...state.orders, {id:3, text:payload , completed: false}]}
   
     default: return state
    

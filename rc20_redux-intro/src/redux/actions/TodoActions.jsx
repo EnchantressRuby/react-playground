@@ -1,11 +1,11 @@
 
-export const sil =(id)=>({
+export const del =(id)=>({
 
 
     type:"DELETE",payload:id
 })
 
-export const ekle = (todo) => ({
+export const add = (todo) => ({
   type: "ADD",
   payload: todo,
 });
