@@ -1,9 +1,24 @@
-import React from 'react'
+import { createSlice } from "@reduxjs/toolkit"
 
-const permissionSlice = () => {
-  return (
-    <div>permissionSlice</div>
-  )
-}
+const permissionSlice = createSlice({
+  name: "permissionSlice",
 
-export default permissionSlice
+  initialState: {
+    email: "",
+    password: "",
+  },
+
+  reducers: {
+    createUser: () => {
+
+    },
+
+    deleteUser: () => {
+
+    },
+  }
+})
+
+export const { createUser, deleteUser } = permissionSlice.actions
+
+export default permissionSlice.reducer
