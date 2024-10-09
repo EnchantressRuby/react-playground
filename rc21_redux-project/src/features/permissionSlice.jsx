@@ -14,8 +14,9 @@ const permissionSlice = createSlice({
       state.password = action.payload.password
     },
 
-    deleteUser: () => {
-
+    deleteUser: (state) => {
+      state.email = ""
+      state.password = ""
     },
   }
 })
