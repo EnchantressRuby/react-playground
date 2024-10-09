@@ -9,7 +9,7 @@ const permissionSlice = createSlice({
   },
 
   reducers: {
-    createUser: () => {
+    createUser: (state, action) => {
 
     },
 
