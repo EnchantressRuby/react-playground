@@ -10,7 +10,8 @@ const permissionSlice = createSlice({
 
   reducers: {
     createUser: (state, action) => {
-
+      state.email = action.payload.email
+      state.password = action.payload.password
     },
 
     deleteUser: () => {
