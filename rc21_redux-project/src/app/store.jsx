@@ -1,9 +1,10 @@
-import React from 'react'
+import { configureStore } from "@reduxjs/toolkit";
+import permissionSlice from "../features/permissionSlice";
+import newsSlice from "../features/newsSlice";
 
-const store = () => {
-  return (
-    <div>store</div>
-  )
-}
-
-export default store
+export const store = configureStore({
+  reducer: {
+    permissionSlice: permissionSlice,
+    newsSlice: newsSlice,
+  },
+});
