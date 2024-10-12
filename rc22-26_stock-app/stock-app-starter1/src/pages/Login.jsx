@@ -13,8 +13,8 @@ import { object, string } from 'yup';
 
 const Login = () => {
   const loginSchema = object({
-    password: string().required(),
-    email: string().email(),
+    password: string().required().min(8).max(16),
+    email: string().email("Please enter a valid email address.").required(),
   });
 
   return (
@@ -55,7 +55,7 @@ const Login = () => {
           </Typography>
 
           <Formik initialValues={{ email: "", password: "" }}
-            // validationSchema={loginSchema}
+            validationSchema={loginSchema}
             onSubmit={(values, actions) => {
               //? POST (login)
               //? Clear form
@@ -66,7 +66,7 @@ const Login = () => {
               actions.setSubmitting(false)
             }}
           >
-            {({ isSubmitting, handleChange, values, touched, errors }) => (
+            {({ isSubmitting, handleChange, values, touched, errors, handleBlur }) => (
               <Form>
                 <Box
                   sx={{ display: "flex", flexDirection: "column", gap: 2 }}
@@ -79,8 +79,9 @@ const Login = () => {
                     variant="outlined"
                     onChange={handleChange}
                     value={values.email}
-                    error={touched.email && errors.email}
-                    helperText={""}
+                    error={touched.email && Boolean(errors.email)}
+                    onBlur={handleBlur}
+                    helperText={touched.email && errors.email}
                   />
                   <TextField
                     label="password"
@@ -90,6 +91,9 @@ const Login = () => {
                     variant="outlined"
                     onChange={handleChange}
                     value={values.password}
+                    error={touched.password && Boolean(errors.password)}
+                    onBlur={handleBlur}
+                    helperText={touched.password && errors.password}
                   />
                   <Button variant="contained" type="submit" disabled={isSubmitting}>
                     Submit
