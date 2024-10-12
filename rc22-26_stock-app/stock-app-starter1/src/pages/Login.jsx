@@ -13,8 +13,19 @@ import { object, string } from 'yup';
 
 const Login = () => {
   const loginSchema = object({
-    password: string().required().min(8).max(16),
-    email: string().email("Please enter a valid email address.").required(),
+    password: string()
+      .required("Password is required.")
+      .min(8, "Password must be at least 8 characters.")
+      .max(16, "Password must be at most 16 characters.")
+      .matches(/[a-z]+/,
+        "The password must contain at least one lowercase letter.")
+      .matches(/[A-Z]+/,
+        "The password must contain at least one uppercase letter.")
+      .matches(/[!@#$%^&*?]+/,
+        "The password must contain at least one special (!@#$%^&*?) character."),
+    email: string()
+      .email("Please enter a valid email address.")
+      .required("Email is required."),
   });
 
   return (
