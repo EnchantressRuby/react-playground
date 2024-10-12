@@ -10,8 +10,13 @@ import TextField from "@mui/material/TextField"
 import { Button } from "@mui/material"
 import { Formik, Form } from "formik"
 import { object, string } from 'yup';
+// import { login } from "../service/useApiRequest"
+import useApiRequest from "../service/useApiRequest"
 
 const Login = () => {
+
+  const { login } = useApiRequest()
+
   const loginSchema = object({
     password: string()
       .required("Password is required.")
@@ -69,6 +74,7 @@ const Login = () => {
             validationSchema={loginSchema}
             onSubmit={(values, actions) => {
               //? POST (login)
+              login(values)
               //? Clear form
               //? Message (Toast)
               //? Routing (stock)
