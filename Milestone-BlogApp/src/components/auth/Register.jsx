@@ -158,47 +158,7 @@ const Register = () => {
                     helperText={errors.password}
                   />
                 </Box>
-                <Box display="flex" justifyContent="space-between">
-                  <TextField
-                    variant="outlined"
-                    fullWidth
-                    label="Image"
-                    type="text"
-                    name="image"
-                    onChange={handleChange}
-                    value={values.image}
-                    error={touched.image && Boolean(errors.image)}
-                    onBlur={handleBlur}
-                    helperText={errors.image}
-                    sx={{ mr: 1 }}
-                  />
-                  <TextField
-                    variant="outlined"
-                    fullWidth
-                    label="City"
-                    type="text"
-                    name="city"
-                    onChange={handleChange}
-                    value={values.city}
-                    error={touched.city && Boolean(errors.city)}
-                    onBlur={handleBlur}
-                    helperText={errors.city}
-                    sx={{ mr: 1 }}
-                  />
 
-                  <TextField
-                    variant="outlined"
-                    fullWidth
-                    label="Bio"
-                    type="text"
-                    name="bio"
-                    onChange={handleChange}
-                    value={values.bio}
-                    error={touched.bio && Boolean(errors.bio)}
-                    onBlur={handleBlur}
-                    helperText={errors.bio}
-                  />
-                </Box>
                 <Typography
                   sx={{ textAlign: "center", color: "#0288d1", mt: 1 }}
                 >
