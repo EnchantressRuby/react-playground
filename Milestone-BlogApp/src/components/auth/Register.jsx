@@ -51,7 +51,7 @@ const Register = () => {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          height: "calc(100vh - 65px)",
+          height: "90vh",
         }}
       >
         <Formik

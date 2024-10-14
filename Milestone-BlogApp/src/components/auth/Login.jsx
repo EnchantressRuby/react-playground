@@ -19,8 +19,8 @@ const Login = () => {
       .matches(/[a-z]+/, "Password must contain at least one lowercase letter")
       .matches(/[A-Z]+/, "Password must contain at least one uppercase letter")
       .matches(
-        /[@$!%*?&]+/,
-        "Password must contain at least one special character (@$!%*?&)"
+        /[!@#$%^&*?]+/,
+        "Password must contain at least one special character (!@#$%^&*?)"
       ),
   });
 
@@ -30,7 +30,7 @@ const Login = () => {
       <Container
         component="main"
         maxWidth="xs"
-        sx={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", height: "calc(100vh - 65px)" }}>
+        sx={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", height: "90vh" }}>
         <Formik
           initialValues={{ email: "", password: "" }}
           validationSchema={loginSchema}
