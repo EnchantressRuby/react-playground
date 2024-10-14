@@ -2,7 +2,6 @@ import React from "react";
 import { TextField, Button, Box, Typography, Container } from "@mui/material";
 import { Form, Formik } from "formik";
 import { object, string } from "yup";
-import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { Link } from "react-router-dom";
 import useApiRequests from "../../service/useApiRequests";
 
@@ -89,9 +88,7 @@ const Login = () => {
                 />
                 <Typography
                   sx={{ textAlign: "center", color: "#0288d1", mt: 1 }} >
-                  {Object.keys(touched).length > 0 && isValid && (
-                    <CheckCircleIcon />
-                  )}
+                  {Object.keys(touched).length > 0 && isValid}
                 </Typography>
                 <Button
                   type="submit"
