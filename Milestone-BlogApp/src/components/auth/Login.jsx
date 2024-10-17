@@ -26,7 +26,7 @@ const Login = () => {
 
   return (
     <Container
-      sx={{ backgroundColor: "whitesmoke", minWidth: "100%" }}>
+      sx={{ backgroundColor: "whitesmoke", minWidth: "100%", p: 3 }}>
       <Container
         component="main"
         maxWidth="xs"

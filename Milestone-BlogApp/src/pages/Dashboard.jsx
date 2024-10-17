@@ -5,7 +5,6 @@ import BlogCard from '../components/blog/BlogCard'
 const Dashboard = () => {
   return (
     <div>
-      <Navbar />
       <BlogCard />
     </div>
   )

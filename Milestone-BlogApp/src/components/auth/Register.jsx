@@ -37,23 +37,11 @@ const Register = () => {
   });
 
   return (
-    <Container
-      sx={{
-        backgroundColor: "whitesmoke",
-        minWidth: "100%",
-      }}
-    >
+    <Container sx={{ backgroundColor: "whitesmoke", minWidth: "100%", p: 5 }}>
       <Container
         component="main"
         maxWidth="xl"
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          height: "90vh",
-        }}
-      >
+        sx={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
         <Formik
           initialValues={{
             username: "",
@@ -61,9 +49,6 @@ const Register = () => {
             lastName: "",
             email: "",
             password: "",
-            image: "",
-            city: "",
-            bio: "",
           }}
           validationSchema={registerSchema}
           onSubmit={(values, actions) => {
