@@ -2,11 +2,14 @@ import React from "react";
 import { TextField, Button, Box, Typography, Container } from "@mui/material";
 import { Form, Formik } from "formik";
 import { object, string } from "yup";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import useApiRequests from "../../service/useApiRequests";
+import { toastErrorNotify, toastSuccessNotify } from "../../helper/ToastNotify";
 
 const Register = () => {
   const { register } = useApiRequests();
+
+  const navigate = useNavigate()
 
   const registerSchema = object({
     username: string()
@@ -51,11 +54,26 @@ const Register = () => {
             password: "",
           }}
           validationSchema={registerSchema}
-          onSubmit={(values, actions) => {
-            register(values);
-            actions.resetForm();
-            actions.setSubmitting(false);
+          onSubmit={async (values, actions) => {
+            try {
+              const response = await register(values); // Make the API request
+              
+              if (response.success) { // Assuming response contains a success flag
+                toastSuccessNotify('Registration successful! Redirecting to dashboard...');
+                actions.resetForm(); // Reset the form
+                setTimeout(() => {
+                  navigate('/'); // Redirect to dashboard after success
+                }, 1500); // Delay for the toast to show before navigating
+              } else {
+                throw new Error(response.message || 'Registration failed'); // Show API error
+              }
+            } catch (error) {
+              toastErrorNotify(error.message || 'An error occurred'); // Show error toast
+            } finally {
+              actions.setSubmitting(false); // Stop submission state
+            }
           }}
+          
         >
           {({
             isSubmitting,
@@ -159,7 +177,8 @@ const Register = () => {
                     "&:hover": {
                       backgroundColor: "#982B1C"
                     }
-                  }}>
+                  }}
+                 >
                   Sign Up
                 </Button>
                 <Typography variant="body2" align="center">

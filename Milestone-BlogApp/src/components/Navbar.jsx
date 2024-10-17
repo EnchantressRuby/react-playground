@@ -12,6 +12,7 @@ import MenuItem from '@mui/material/MenuItem';
 import { ButtonBase, Menu } from '@mui/material';
 import logo from "../assets/KD-logo.png"
 import Dashboard from '../pages/Dashboard';
+import useApiRequests from '../service/useApiRequests';
 
 const pages = ['Dashboard', 'New Blog', 'About'];
 const settings = ['My Blogs', 'Profile', 'Logout'];
@@ -35,6 +36,7 @@ function ResponsiveAppBar() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+  const {logout} = useApiRequests()
 
   return (
     <AppBar position="static" sx={{ bgcolor: "#DFD3C3" }}>
@@ -122,11 +124,17 @@ function ResponsiveAppBar() {
             open={Boolean(anchorElUser)}
             onClose={handleCloseUserMenu}
           >
-            {settings.map((setting) => (
+            <Box sx={{display:"flex", flexDirection:"column"}}>
+              <Button sx={{ textAlign: 'center', p:1 }}>Profile</Button>
+            <Button sx={{ textAlign: 'center', p:1, mr: 1, ml: 1 }}>My Blogs</Button>
+            <Button sx={{ textAlign: 'center', p:1 }} onClick={logout}>Logout</Button>
+            </Box>
+            
+            {/* {settings.map((setting) => (
               <MenuItem key={setting} onClick={handleCloseUserMenu}>
                 <Typography sx={{ textAlign: 'center' }}>{setting}</Typography>
               </MenuItem>
-            ))}
+            ))} */}
           </Menu>
         </Box>
       </Toolbar>
